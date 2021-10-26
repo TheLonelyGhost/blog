@@ -1,0 +1,67 @@
+dl > dt {
+  font-weight: bold;
+}
+
+.tip {
+  margin: 0.5em;
+  border-color: rgba(200, 200, 100, 0.1);
+  background-color: rgba(200, 200, 100, 0.1);
+}
+.example {
+  display: block;
+  border: thin solid rgba(100, 200, 200, 0.1);
+  background-color: rgba(100, 200, 200, 0.1);
+}
+
+.tip, .example {
+  overflow: auto;
+  padding: 0.8em 1em;
+  border-radius: 0.2em;
+  border-width: 0.01rem; 
+  border-style: solid;
+
+  h1, h2, h3, h4, h5 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h1 {
+    font-size: 1.25rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  h5 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .tip {
+    max-width: 20em;
+    width: 40%;
+
+    &.full {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &.right {
+      float: right;
+    }
+    &.left {
+      float: left;
+    }
+    &:before {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}

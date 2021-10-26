@@ -1,0 +1,56 @@
+[build]
+  command = "hugo --minify -b $URL"
+  publish = "public"
+
+[context.production.environment]
+  HUGO_VERSION = "0.88.1"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.deploy-preview]
+  command = "bash -c 'mv config.toml{,.bak}; { echo \"relativeURLs = true\"; cat config.toml.bak; } > config.toml; hugo --minify --buildFuture -b $DEPLOY_PRIME_URL;'"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.88.1"
+
+[context.branch-deploy]
+  command = "bash -c 'mv config.toml{,.bak}; { echo \"relativeURLs = true\"; cat config.toml.bak; } > config.toml; hugo --minify -b $DEPLOY_PRIME_URL;'"
+  # command = "hugo --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.88.1"
+
+# [[headers]]
+#   [headers.values]
+#     X-Frame-Options = "DENY"
+#     X-XSS-Protection = "1; mode=block"
+
+[[plugins]]
+package = "netlify-plugin-checklinks"
+
+  [plugins.inputs]
+  # An array of glob patterns for pages on your site
+  # Recursive traversal will start from these
+  entryPoints = [
+    "index.html",
+  ]
+
+  # Recurse through all the links and asset references on your page, starting
+  # at the entrypoints
+  recursive = true
+
+  pretty = true
+
+  skipPatterns = ["--tlg-homepage.netlify.app"]
+  todoPatterns = []
+
+  checkExternal = false # true
+  followSourceMaps = false
+
+[[plugins]]
+package = "netlify-plugin-no-more-404"
+
+  [plugin.inputs]
+  on404 = "error"
+  # Change this if you knowingly want to make breaking changes
+  cacheKey = "2020-06-22"

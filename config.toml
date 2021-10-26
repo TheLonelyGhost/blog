@@ -1,0 +1,69 @@
+baseURL = "https://www.thelonelyghost.com/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "David Alexander"
+theme = "hermit"
+
+enableGitInfo = true
+
+pygmentsCodefences = true
+pygmentsUseClasses = true
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+enableEmoji = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[author]
+  name = "David Alexander"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  dateform        = "02 Jan 2006"
+  dateformShort   = "Jan 02"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  homeSubtitle = "An open source, full-stack developer, empowering users to take control of their data"
+
+  themeColor = "#494f5c"
+
+  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  code_copy_button = false # Turn on/off the code-copy-button for code-fields
+
+  # webMentionUrl = "https://webmention.io/www.thelonelyghost.com/webmention"
+  # pingbackUrl = "https://webmention.io/www.thelonelyghost.com/xmlrpc"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/thelonelyghost"
+
+  [[params.social]]
+    name = "mastodon"
+    url = "https://toot.cafe/@thelonelyghost"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/davidpaulalexander"
+
+  [[params.social]]
+    name = "email"
+    # Must be rot13 encoded
+    email = "qnivq@cbegsbyvb.gurybaryltubfg.pbz"
+
+[menu]
+
+  [[menu.main]]
+    name = "Notebook"
+    url = "posts/"
+
+  [[menu.main]]
+    name = "Portfolio"
+    url = "work/"
+
+  [[menu.main]]
+    name = "About"
+    url = "about/"

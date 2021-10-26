@@ -1,0 +1,8 @@
+resources/
+public/
+
+# Local Netlify folder
+.netlify
+
+bin/
+node_modules/

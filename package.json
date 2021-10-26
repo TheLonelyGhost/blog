@@ -1,0 +1,22 @@
+{
+  "name": "tlg-personal-site",
+  "version": "0.0.1",
+  "description": "Tooling around the publishing https://www.thelonelyghost.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheLonelyGhost/personal-site.git"
+  },
+  "author": "David Alexander <opensource@thelonelyghost.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheLonelyGhost/personal-site/issues"
+  },
+  "homepage": "https://github.com/TheLonelyGhost/personal-site#readme",
+  "dependencies": {
+    "netlify-cli": "^4.0.0"
+  }
+}
