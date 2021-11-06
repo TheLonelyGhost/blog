@@ -1,9 +1,8 @@
 ---
-aliases:
-  - /snip/direnv-for-secure-coding.html
+aliases: [/snip/direnv-for-secure-coding.html]
 title: 'Direnv: for secure coding and kind documentation'
-date: 2017-06-01T14:43:22
-type: snippet
+created: 2017-06-01T14:43:22-04:00
+modified: 2021-11-05T20:47:43-04:00
 ---
 
 ## What environment variables are
