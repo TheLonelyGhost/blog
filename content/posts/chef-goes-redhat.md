@@ -1,9 +1,9 @@
 ---
-aliases:
-  - /post/chef-goes-redhat.html
+aliases: [/post/chef-goes-redhat.html]
 title: Chef goes RedHat
-date: 2019-04-04T23:19:01
-tags: ['chef', 'devops', 'inspec', 'habitat']
+created: 2019-04-04T23:19:01-04:00
+tags: [chef, devops, inspec, habitat]
+modified: 2021-11-05T20:54:28-04:00
 ---
 
 Given the [recent news][news-story] that broke about Chef's changes to their licensing model (and the associated [FAQ][license-faq]), a lot of chaos has ensued and I feel the need to straighten out a few things since I've been present for most every public development so far.
