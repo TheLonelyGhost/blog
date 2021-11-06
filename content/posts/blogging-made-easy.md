@@ -1,9 +1,9 @@
 ---
-aliases:
-  - /post/blogging-made-easy.html
-title: 'Blogging made easy'
-date: 2018-01-28T23:10:31
-tags: ['workflow']
+aliases: [/post/blogging-made-easy.html]
+title: Blogging made easy
+created: 2018-01-28T23:10:31-05:00
+tags: [workflow]
+modified: 2021-11-05T20:52:21-04:00
 ---
 
 Since starting this blog, I've encountered any number of topics where I've literally said, "Maybe I'll write a blog post about that..." The biggest hinderance has always been thus:
