@@ -20,6 +20,11 @@
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.88.1"
 
+[[redirects]]
+  from = "/j/hacking-course"
+  to = "https://youtu.be/EE-xtCF3T94"
+  status = 302
+
 # [[headers]]
 #   [headers.values]
 #     X-Frame-Options = "DENY"
