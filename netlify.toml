@@ -58,4 +58,4 @@ package = "netlify-plugin-no-more-404"
   [plugin.inputs]
   on404 = "error"
   # Change this if you knowingly want to make breaking changes
-  cacheKey = "2020-06-22"
+  cacheKey = "2021-11-20"
