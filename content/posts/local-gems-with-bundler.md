@@ -3,7 +3,6 @@ aliases: [/note/local-gems-with-bundler.html]
 title: Local gems with Bundler
 created: 2016-12-28T17:27:06-05:00
 tags: [note-to-self, ruby]
-modified: 2021-11-05T20:51:22-04:00
 ---
 
 Testing an unreleased version of a gem? Want to develop 2 unreleased projects

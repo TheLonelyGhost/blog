@@ -2,7 +2,6 @@
 draft: true
 created: 2021-02-11T21:23:44-05:00
 title: A Tour of Hashicorp Vault
-modified: 2021-02-11T21:41:39-05:00
 ---
 
 So you want to store your secrets in a way your applications can easily access, but still be super secure? Wanting a solution that doesn't limit you on any particular language, framework, or platform? You've come to the right place.

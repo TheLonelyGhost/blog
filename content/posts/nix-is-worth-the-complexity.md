@@ -1,8 +1,6 @@
 ---
 title: Nix Is Worth the Complexity
 created: 2021-07-04T01:11:27-04:00
-draft: false
-modified: 2021-11-05T20:51:33-04:00
 ---
 
 Recently I've gotten fed up with the breaking changes in [Homebrew package manager](https://brew.sh/). After some research, using [Nixpkgs][nix] seemed like a far more stable option for GNU/Linux tooling on MacOS, albeit with a decent learning curve for configuration.

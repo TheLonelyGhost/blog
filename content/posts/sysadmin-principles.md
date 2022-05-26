@@ -1,7 +1,6 @@
 ---
 created: 2021-04-12T12:35:00-04:00
 title: 7 principles of a good sysadmin
-modified: 2021-04-14T23:55:13-04:00
 ---
 
 This seems to be a common topic of conversation, so I figure I should put it on paper (so to speak) what I value as a systems administrator, or "sysadmin."

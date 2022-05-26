@@ -3,7 +3,6 @@ aliases: [/post/what-is-a-symbol.html]
 title: What is a Symbol?
 created: 2017-10-09T23:02:00-04:00
 tags: [computer-science]
-modified: 2021-11-05T20:52:11-04:00
 ---
 
 As I was browsing twitter this evening, I came across [a tweet by @searls asking newer rubyists (&lt;5 years) what some still confusing concepts are in Ruby](https://twitter.com/searls/status/917392217140072449). The most common concept that remained confusing was symbols, so here’s my explanation of it.

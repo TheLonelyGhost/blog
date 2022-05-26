@@ -3,7 +3,6 @@ aliases: [/post/iron-crystals.html]
 title: Iron Crystals
 created: 2017-01-07T21:30:00-05:00
 tags: [crystal, rust]
-modified: 2021-11-05T20:50:57-04:00
 ---
 
 Today, I've begun looking into compiling the Crystal compiler from another

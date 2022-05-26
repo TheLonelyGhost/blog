@@ -3,7 +3,6 @@ aliases: [/post/usernames-not-email-addresses.html]
 title: Usernames, not Email Addresses
 created: 2017-06-20T11:05:00-04:00
 tags: [recruiters, security, user-experience]
-modified: 2021-11-05T20:50:46-04:00
 ---
 
 ![Email to old address from recruiter](./recruiter-email.png)
