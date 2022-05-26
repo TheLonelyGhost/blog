@@ -33,6 +33,8 @@ unsafe = true
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   code_copy_button = false # Turn on/off the code-copy-button for code-fields
+  
+  relatedPosts = true
 
   # webMentionUrl = "https://webmention.io/www.thelonelyghost.com/webmention"
   # pingbackUrl = "https://webmention.io/www.thelonelyghost.com/xmlrpc"

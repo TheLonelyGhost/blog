@@ -54,6 +54,7 @@
 			{{ .TableOfContents }}
 		</aside>
 		{{- end }}
+		{{- if false }}
 		<div class="post-nav thin">
 			{{- with .NextInSection }}
 			<a class="next-post" href="{{ .RelPermalink }}">
@@ -66,6 +67,7 @@
 			</a>
 			{{- end }}
 		</div>
+		{{- end }}
 		<div id="comments" class="thin">
 		{{- partial "comments.html" . -}}
 		</div>
