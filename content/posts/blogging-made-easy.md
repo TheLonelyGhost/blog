@@ -1,7 +1,7 @@
 ---
 aliases: [/post/blogging-made-easy.html]
 title: Blogging made easy
-created: 2018-01-28T23:10:31-05:00
+date: 2018-01-28T23:10:31-05:00
 tags: [workflow]
 ---
 

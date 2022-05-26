@@ -1,7 +1,7 @@
 ---
 aliases: [/post/intro-to-rclone.html]
 title: Intro to rclone
-created: 2017-04-19T14:23:19-04:00
+date: 2017-04-19T14:23:19-04:00
 tags: [automation, cli, backups]
 ---
 

@@ -1,6 +1,6 @@
 ---
 draft: true
-created: 2021-02-11T21:23:44-05:00
+date: 2021-02-11T21:23:44-05:00
 title: A Tour of Hashicorp Vault
 ---
 

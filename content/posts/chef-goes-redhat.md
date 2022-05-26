@@ -1,7 +1,7 @@
 ---
 aliases: [/post/chef-goes-redhat.html]
 title: Chef goes RedHat
-created: 2019-04-04T23:19:01-04:00
+date: 2019-04-04T23:19:01-04:00
 tags: [chef, devops, inspec, habitat]
 ---
 

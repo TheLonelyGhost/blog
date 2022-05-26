@@ -1,7 +1,7 @@
 ---
 aliases: [/note/local-gems-with-bundler.html]
 title: Local gems with Bundler
-created: 2016-12-28T17:27:06-05:00
+date: 2016-12-28T17:27:06-05:00
 tags: [note-to-self, ruby]
 ---
 

@@ -1,5 +1,5 @@
 ---
-created: 2021-04-12T12:35:00-04:00
+date: 2021-04-12T12:35:00-04:00
 title: 7 principles of a good sysadmin
 ---
 

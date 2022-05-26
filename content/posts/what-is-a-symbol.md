@@ -1,7 +1,7 @@
 ---
 aliases: [/post/what-is-a-symbol.html]
 title: What is a Symbol?
-created: 2017-10-09T23:02:00-04:00
+date: 2017-10-09T23:02:00-04:00
 tags: [computer-science]
 ---
 

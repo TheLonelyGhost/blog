@@ -1,7 +1,7 @@
 ---
 aliases: [/post/iron-crystals.html]
 title: Iron Crystals
-created: 2017-01-07T21:30:00-05:00
+date: 2017-01-07T21:30:00-05:00
 tags: [crystal, rust]
 ---
 

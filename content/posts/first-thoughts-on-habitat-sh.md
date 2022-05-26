@@ -1,7 +1,7 @@
 ---
 aliases: [/post/first-thoughts-on-habitat.html]
 title: First thoughts on Habitat
-created: 2017-05-25T13:46:21-04:00
+date: 2017-05-25T13:46:21-04:00
 ---
 
 This past week I was at ChefConf going to various panels, intent on learning about Inspec and the best practices therein. While there, half of the panels were on this thing called Habitat, which I originally thought to be Yet Another Docker Alternative &reg;. First of all, it's not. Like Vagrant's relationship with Virtualbox, it tends to pair nicely with it and use it by default, but it is not the only way to use it by a long shot.

@@ -1,7 +1,7 @@
 ---
 aliases: [/note/recruiter-quality-score.html]
 title: Recruiter quality score
-created: 2017-06-20T14:35:00-04:00
+date: 2017-06-20T14:35:00-04:00
 tags: [note-to-self, job-hunt]
 ---
 

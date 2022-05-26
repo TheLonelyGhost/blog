@@ -1,7 +1,7 @@
 ---
 aliases: [/post/importance-of-packaging.html]
 title: On the Importance of Packaging
-created: 2017-06-06T10:18:53-04:00
+date: 2017-06-06T10:18:53-04:00
 tags: [development, workflow, open-source]
 ---
 
