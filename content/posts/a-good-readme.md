@@ -14,7 +14,7 @@ I see a good project README answering the following 3 questions:
 
 I tend to answer this with a few key sections of a README with some self-evident headings. Doing so, in my case, generally looks something like this:
 
-```
+<pre>
 # My Project
 
 This is my project. It does cool things and talks to neat people.
@@ -27,29 +27,28 @@ This is my project. It does cool things and talks to neat people.
 
 ## Usage
 
-\`\`\`
+```
 user@localhost $ my-project --do-things fun --often
 This is the output. Take actual output and put
 it in here, then replace personal details like
 usernames and IP addresses with generic placeholders
-\`\`\`
+```
 
 ## Build
 
 Run the following:
 
-\`\`\`
+```
 user@localhost $ poetry install
 user@localhost $ poetry build
-\`\`\`
+```
 
 ### Testing
 
-\`\`\`
-user@localhost $ poetry run pytest
-\`\`\`
-
 ```
+user@localhost $ poetry run pytest
+```
+</pre>
 
 Some key concepts to keep it brief:
 
