@@ -1,6 +1,6 @@
 ---
 title: "Facets of a Good README"
-created: 2022-05-25T22:11:01-04:00
+created: 2022-01-25T22:11:01-04:00
 ---
 
 I see a good project README answering the following 3 questions:
