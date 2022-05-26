@@ -4,8 +4,6 @@ created: 2022-05-25T22:11:01-04:00
 modified: 2022-05-25T22:11:01-04:00
 ---
 
-# Facets of a Good README
-
 I see a good project README answering the following 3 questions:
 
 1. What does this do?
@@ -14,7 +12,8 @@ I see a good project README answering the following 3 questions:
 
 I tend to answer this with a few key sections of a README with some self-evident headings. Doing so, in my case, generally looks something like this:
 
-<pre>
+<pre arial-label="Markdown file contents">
+
 # My Project
 
 This is my project. It does cool things and talks to neat people.
@@ -48,6 +47,7 @@ user@localhost $ poetry build
 ```
 user@localhost $ poetry run pytest
 ```
+
 </pre>
 
 Some key concepts to keep it brief:
