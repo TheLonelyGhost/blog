@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: TheLonelyGhost/blog
+  branch: main
+publish_mode: editorial_workflow
+site_url: https://www.thelonelyghost.com
+media_folder: static/img
+public_folder: /img
+collections:
+  - name: blog
+    label: Blog
+    folder: content/posts
+    format: yaml-frontmatter
+    create: true
+    slug: '{{slug}}'
+    preview_path: 'posts/{{slug}}.{{extension}}'
+    view_filters:
+      - label: Drafts
+        field: draft
+        pattern: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Date
+        name: date
+        widget: datetime
+        format: 'YYYY-MM-DD HH:mm:ssZZ'
+      - label: Tags
+        name: tags
+        widget: list
+        add_to_top: true
+        label_singular: Tag
+      - label: Body
+        name: body
+        widget: markdown
+
