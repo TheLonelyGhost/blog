@@ -5,6 +5,7 @@ title = "David Alexander"
 theme = "hermit"
 
 enableGitInfo = true
+enableRobotsTXT = true
 
 pygmentsCodefences = true
 pygmentsUseClasses = true
