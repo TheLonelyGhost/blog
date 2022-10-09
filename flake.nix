@@ -13,6 +13,8 @@
           pkgs.nodePackages.npm
           pkgs.hugo
           pkgs.nodejs
+          pkgs.nodePackages.npm
+          pkgs.nodePackages.typescript
         ];
         buildInputs = [
         ];
