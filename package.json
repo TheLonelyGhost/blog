@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/TheLonelyGhost/personal-site#readme",
   "dependencies": {
-    "netlify-cli": "^12.0.11"
+    "netlify-cli": "^12.2.8"
   }
 }
