@@ -10,11 +10,8 @@
       devShell = pkgs.mkShell {
         nativeBuildInputs = [
           pkgs.bashInteractive
-          pkgs.nodePackages.npm
           pkgs.hugo
-          pkgs.nodejs
-          pkgs.nodePackages.npm
-          pkgs.nodePackages.typescript
+          pkgs.netlify-cli
         ];
         buildInputs = [
         ];
