@@ -2,6 +2,28 @@ dl > dt {
   font-weight: bold;
 }
 
+// Allow `float: right` and such within the article without messing up the rest of the layout
+article .content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+figure.quote {
+  text-align: left;
+
+  p {
+    font-size: 1rem;
+    opacity: 1;
+  }
+
+  figcaption {
+    padding-left: 3em;
+    font-size: .8rem;
+  }
+}
+
+
 .tip {
   margin: 0.5em;
   border-color: rgba(200, 200, 100, 0.1);
@@ -13,7 +35,7 @@ dl > dt {
   background-color: rgba(100, 200, 200, 0.1);
 }
 
-.tip, .example {
+.tip, .example, .diversion {
   overflow: auto;
   padding: 0.8em 1em;
   border-radius: 0.2em;
@@ -43,7 +65,7 @@ dl > dt {
 }
 
 @media (min-width: 600px) {
-  .tip {
+  .diversion, .tip {
     max-width: 20em;
     width: 40%;
 

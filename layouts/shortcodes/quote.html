@@ -1,0 +1,23 @@
+{{ if .Get "url" }}
+<figure class="quote">
+  <blockquote url="{{ .Get "url" }}">
+    {{ .Inner }}
+  </blockquote>
+  <figcaption>
+    From <cite><a href="{{ .Get "url" }}">{{ if .Get "title" }}{{ .Get "title" }}{{ else }}{{ .Get "url" }}{{ end }}</a></cite>
+  </figcaption>
+</figure>
+{{ else if .Get "title" }}
+<figure class="quote">
+  <blockquote>
+    {{ .Inner }}
+  </blockquote>
+  <figcaption>
+    From <cite>{{ .Get "title" }}</cite>
+  </figcaption>
+</figure>
+{{ else }}
+<blockquote>
+  {{ .Inner }}
+</blockquote>
+{{ end }}
