@@ -3,9 +3,13 @@ title = "Implements Programmer"
 relativeURLs = true
 languageCode = "en-us"
 defaultContentLanguage = "en"
-theme = "FixIt"
 
 # copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+
+# theme = "FixIt"
+[module]
+  [[module.imports]]
+    path = "github.com/hugo-fixit/FixIt"
 
 [author]
   name = "David Alexander"
@@ -201,7 +205,3 @@ theme = "FixIt"
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
-
-[module]
-  [[module.imports]]
-    path = "github.com/hugo-fixit/FixIt"

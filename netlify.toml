@@ -41,7 +41,7 @@ package = "netlify-plugin-checklinks"
 
   pretty = true
 
-  skipPatterns = ["--tlg-homepage.netlify.app"]
+  skipPatterns = ["--tlg-homepage.netlify.app", "/1.5x$", "/2x$"]
   todoPatterns = []
 
   checkExternal = false # true
