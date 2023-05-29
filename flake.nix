@@ -11,7 +11,8 @@
         nativeBuildInputs = [
           pkgs.bashInteractive
           pkgs.hugo
-          pkgs.netlify-cli
+          # pkgs.netlify-cli
+          # pkgs.html-tidy
         ];
         buildInputs = [
         ];
