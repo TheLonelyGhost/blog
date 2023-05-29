@@ -201,3 +201,7 @@ theme = "FixIt"
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
+
+[module]
+  [[module.imports]]
+    path = "github.com/hugo-fixit/FixIt"
