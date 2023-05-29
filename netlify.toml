@@ -2,22 +2,18 @@
   command = "hugo --minify -b $URL"
   publish = "public"
 
-[context.production.environment]
+[build.environment]
   HUGO_VERSION = "0.112.4"
+
+[context.production.environment]
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
   command = "hugo --minify -b $DEPLOY_PRIME_URL"
 
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.112.4"
-
 [context.branch-deploy]
   command = "hugo --minify -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy.environment]
-  HUGO_VERSION = "0.112.4"
 
 # [[redirects]]
 #   from = "/j/hacking-course"
