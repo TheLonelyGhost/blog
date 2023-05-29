@@ -1,5 +1,5 @@
 ---
-project: Browser extension
+title: Browser extension
 organization: '[redacted]'
 featuredImg: /work/tests-well.svg
 summary: |

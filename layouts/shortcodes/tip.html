@@ -1,5 +1,5 @@
 <!-- hot tip -->
-<aside class="tip{{ if .Get "side" }} {{ .Get "side" }}{{ else }} full{{ end }}">
+<section class="tip{{ if .Get "side" }} {{ .Get "side" }}{{ else }} full{{ end }}">
   <h1>{{ with .Get "href" }}<a name="{{.}}"></a>{{ end }}{{ if .Get "title" }}{{.Get "title"}}{{ else }}TIP{{ end }}</h1>
   {{ .Inner }}
-</aside>
+</section>

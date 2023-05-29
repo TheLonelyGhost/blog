@@ -1,20 +1,11 @@
 baseURL = "https://www.thelonelyghost.com/"
+title = "Implements Programmer"
 relativeURLs = true
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "David Alexander"
-theme = "hermit"
+theme = "FixIt"
 
-enableGitInfo = true
-enableRobotsTXT = true
-
-pygmentsCodefences = true
-pygmentsUseClasses = true
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-enableEmoji = true
-
-[markup.goldmark.renderer]
-unsafe = true
+# copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
 [author]
   name = "David Alexander"
@@ -23,51 +14,190 @@ unsafe = true
   tag = "tags"
 
 [params]
-  dateform        = "02 Jan 2006"
-  dateformShort   = "Jan 02"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+  version = "0.2.X"
+  dateFormat = "2006-01-02"
+  enablePWA = true
+  externalIcon = true
 
-  homeSubtitle = "An open source, full-stack developer, empowering users to take control of their data"
+  fraction = true
 
-  themeColor = "#494f5c"
+  [params.app]
+    title = "Implements Programmer"
 
-  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  [params.search]
+    enable = true
+    type = "lunr"
+    placeholder = "Search"
 
-  code_copy_button = false # Turn on/off the code-copy-button for code-fields
-  
-  relatedPosts = true
+  [params.header]
+    desktopMode = "sticky"
+    mobileMode = "normal"
 
-  # webMentionUrl = "https://webmention.io/www.thelonelyghost.com/webmention"
-  # pingbackUrl = "https://webmention.io/www.thelonelyghost.com/xmlrpc"
+    [params.header.title]
+      logo = "/icon.svg"
+      name = "Implements Programmer"
+      # typeit = true
 
-  [[params.social]]
-    name = "twitter"
-    url = "https://twitter.com/thelonelyghost"
+  [params.breadcrumb]
+    enable = true
 
-  [[params.social]]
-    name = "mastodon"
-    url = "https://toot.cafe/@thelonelyghost"
+  [params.footer]
+    enable = true
+    hugo = false
 
-  [[params.social]]
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/thelonelyghost"
+    # site creation year
+    since = 2016
+    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a> (Ghost icon made by Freepik from www.flaticon.com)'
 
-  [[params.social]]
-    name = "email"
-    # Must be rot13 encoded
-    email = "qnivq@cbegsbyvb.gurybaryltubfg.pbz"
+  [params.section]
+    dateFormat = "Jan 02"
+    # number of RSS pages
+    rss = 30
+
+  [params.list]
+    dateFormat = "May 02"
+    # number of RSS pages
+    rss = 30
+
+  [params.tagcloud]
+    enable = true
+    min = 14 # font size in px
+    max = 32 # font size in px
+    peakCount = 10 # Max count of posts per tag
+    orderby = "name"
+
+  [params.home]
+    rss = 30
+
+    [params.home.profile]
+      enable = true
+      avatarURL = "https://avatars.githubusercontent.com/u/1276113"
+
+      title = "Hello, I'm David!"
+      subtitle = "Herein I ramble."
+      typeit = false
+
+      social = true
+      # disclaimer = "Views are my own"
+
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    GitHub = "TheLonelyGhost"
+    GitLab = "TheLonelyGhost"
+    LinkedIn = "thelonelyghost"
+    Twitter = "thelonelyghost"
+    SourceHut = "~thelonelyghost"
+    # Stackoverflow = ""
+    # HackerNews = "personalops"
+    # Twitch = "onus_on_you"
+    RSS = true
+
+    [params.social.Mastodon]
+      prefix = "https://toot.cafe/"
+      id = "@thelonelyghost"
+
+  [params.page]
+    authorAvatar = false
+    hiddenFromHomePage = false
+    twemoji = true
+    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    rssFullText = true
+    wordCount = true
+    readingTime = true
+    # endFlag = "--- END ---"
+
+    [params.page.code]
+      copy = false
+      edit = false
+      maxShownLines = 10
+
+    [params.page.share]
+      enable = false
+
+    [params.page.comment]
+      enable = false
+
+  [params.cookieconsent]
+    enable = false
+
+  [params.readingProgress]
+    enable = true
 
 [menu]
-
   [[menu.main]]
-    name = "Notebook"
+    name = "Posts"
     url = "posts/"
 
   [[menu.main]]
-    name = "Portfolio"
+    name = "Projects"
     url = "work/"
+
+  [[menu.main]]
+    name = "Speaking"
+    url = "talks/"
 
   [[menu.main]]
     name = "About"
     url = "about/"
+
+[markup]
+   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    ############### necessary configs> ###################
+    # Required per https://github.com/hugo-fixit/FixIt/issues/43
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    ############### <necessary configs ###################
+    guessSyntax = true
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      unsafe = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[permalinks]
+  posts = "posts/:filename"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.vimeo]
+    enableDNT = true
+    simple = false
+  [privacy.youtube]
+    privacyEnhanced = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]

@@ -1,5 +1,5 @@
 ---
-title: About
+title: Who Am I?
 lastmod: 2020-06-22T02:16:00Z
 date: 2020-06-21T14:30:00Z
 ---
@@ -16,4 +16,4 @@ Would you like to join me in this effort? Connect with me and let's see what imp
 
 ---
 
-All opinions expressed on this site are my own and do not necessarily reflect those of my employer. They may not even reflect my own opinions anymore, since my posts may have fallen severely out-of-date.
+All opinions expressed on this site are my own and do not necessarily reflect those of my employer. They may not even reflect my own opinions anymore, since these posts may have fallen severely out-of-date.

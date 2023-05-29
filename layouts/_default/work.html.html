@@ -1,32 +1,85 @@
-{{ define "header" }}
-{{ partialCached "header.html" . }}
-{{ end }}
+{{- define "title" -}}
+  {{- .Title }} - {{ .Site.Title -}}
+{{- end -}}
 
-{{ define "main" }}
-	<main class="site-main section-inner thin animated fadeIn faster">
-		<h1>{{ .Title }}</h1>
-		{{- if .Content }}
+{{ define "content" }}
+	<div class="page archive">
+    {{- /* Title */ -}}
+    <h1 class="single-title animate__animated animate__pulse animate__faster">
+      {{- .Params.Title | default (T .Section) | default .Section }}
+      <sup>{{- len .Pages -}}</sup>
+    </h1>
 		<div class="content">
 			{{ .Content }}
-		</div>
-		{{- end }}
-		<div class="posts-group">
-			<ul class="posts-list">
-				{{- range .Pages }}
-				<li class="post-item">
-          <a href="{{.RelPermalink}}">
-          <figure style="text-align: center">
-            <img src="{{ .Params.featuredImg }}" alt="{{ .Summary }}" style="max-width: 30em;max-height: 20em" />
-            <figcaption><h3 class="post-title">{{.Params.project}} by {{.Params.organization}}</h3></figcaption>
-          </figure>
-          </a>
-				</li>
-				{{- end }}
-			</ul>
+
+      <hr />
+
+      <div class="links">
+        <span style="font-size:1.5rem;display:flex;grid-column-gap:1em;justify-content:center">
+        {{- $socialMap := resources.Get "data/social.yml" | transform.Unmarshal -}}
+        {{- $socialArr := slice -}}
+        {{- $codeSocials := slice "github" "gitlab" "bitbucket" "sourcehut" -}}
+        {{- range $key, $value := .Site.Params.social -}}
+          {{- $social := $key | lower | index $socialMap | default dict -}}
+          {{- if (in $codeSocials ($key | lower)) -}}
+            {{- if reflect.IsMap $value -}}
+              {{- with $value.weight -}}
+                {{- $social = dict "Weight" . | merge $social -}}
+              {{- end -}}
+              {{- with $value.prefix -}}
+                {{- $social = dict "Prefix" . | merge $social -}}
+              {{- end -}}
+              {{- with $value.template -}}
+                {{- $social = dict "Template" . | merge $social -}}
+              {{- end -}}
+              {{- with $value.id -}}
+                {{- $social = dict "Id" . | merge $social -}}
+              {{- end -}}
+              {{- with $value.url -}}
+                {{- $social = dict "Url" . | merge $social -}}
+              {{- end -}}
+              {{- with $value.title -}}
+                {{- $social = dict "Title" . | merge $social -}}
+              {{- end -}}
+              {{- with $value.newtab -}}
+                {{- $social = dict "Newtab" . | merge $social -}}
+              {{- end -}}
+              {{- with $value.icon -}}
+                {{- $social = dict "Icon" . | merge $social -}}
+              {{- end -}}
+            {{- else if ne $value true -}}
+              {{- $social = dict "Id" $value | merge $social -}}
+            {{- end -}}
+            {{- if $social.Icon.Simpleicons -}}
+              {{- $prefix := ($.Scratch.Get "cdn" | default dict).simpleIconsPrefix -}}
+              {{- $social = dict "Prefix" $prefix | dict "Icon" | merge $social -}}
+            {{- end -}}
+            {{- $socialArr = $socialArr | append $social -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if gt (len $socialArr) 0 -}}
+          <span>See also:</span>
+          {{- range sort $socialArr "Weight" -}}
+            {{- partial "plugin/social.html" . -}}
+          {{- end -}}
+        {{- end -}}
+        </span>
+      </div>
+
+      <hr />
+
+      {{- if .Pages -}}
+        <h2>Details</h2>
+        <ul>
+          {{- range .Pages }}
+            <li>
+              <article class="archive-item">
+                <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }} by {{ .Params.organization }}</a>
+              </article>
+            </li>
+          {{- end }}
+        </ul>
+      {{- end -}}
 		</div>
 	</main>
-{{ end }}
-
-{{ define "footer" }}
-{{ partialCached "footer.html" . }}
 {{ end }}

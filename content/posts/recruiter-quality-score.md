@@ -4,6 +4,7 @@ title: Recruiter quality score
 date: 2017-06-20T14:35:00-04:00
 tags: [note-to-self, job-hunt]
 unlisted: true
+hiddenFromHomePage: true
 ---
 
 Although I know I'm incredibly fickle when it comes to who I'll work with when it comes to recruiting, the fact of the matter is that I value honest effort over the type to throw bodies at the wall. The shotgun approach is just lazy and rarely pans out. Here's my attempt at creating a rubric for my minimum barrier to responding.

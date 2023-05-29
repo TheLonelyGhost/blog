@@ -1,5 +1,5 @@
 ---
-project: Food Court
+title: Food Court
 organization: Campus Special
 featuredImg: /work/iced-coffee.svg
 summary: |

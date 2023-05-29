@@ -1,0 +1,30 @@
+{{- define "title" -}}
+  {{- .Title }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{ define "content" }}
+	<div class="page archive">
+      {{- /* Title */ -}}
+      <h1 class="single-title animate__animated animate__pulse animate__faster">
+        {{- .Params.Title | default (T .Section) | default .Section }}
+        <sup>{{- len .Pages -}}</sup>
+      </h1>
+		{{- if .Content }}
+		<div class="content">
+			{{ .Content }}
+		</div>
+		{{- end }}
+
+    {{- if .Pages -}}
+      <ul>
+        {{- range .Pages }}
+          <li>
+            <article class="archive-item">
+              <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}{{ if .Params.location }} @ {{ .Params.location }}{{ end }}</a>
+            </article>
+          </li>
+        {{- end }}
+      </ul>
+    {{- end -}}
+	</main>
+{{ end }}

@@ -1,5 +1,5 @@
 ---
-project: Azure Pipelines Automation
+title: Azure Pipelines Automation
 organization: KAR Global
 featuredImg: /work/woman-computer-doodle.svg
 summary: |

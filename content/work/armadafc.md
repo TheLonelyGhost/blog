@@ -1,5 +1,5 @@
 ---
-project: ETL
+title: ETL
 organization: Armada Football Club
 featuredImg: /work/computer-tool.svg
 summary: |

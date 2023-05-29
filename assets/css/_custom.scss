@@ -1,12 +1,9 @@
-dl > dt {
-  font-weight: bold;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-// Allow `float: right` and such within the article without messing up the rest of the layout
-article .content::after {
-  content: "";
-  clear: both;
-  display: table;
+dl > dt {
+  font-weight: bold;
 }
 
 figure.quote {
@@ -61,29 +58,5 @@ figure.quote {
   }
   h5 {
     font-size: 1.05rem;
-  }
-}
-
-@media (min-width: 600px) {
-  .diversion, .tip {
-    max-width: 20em;
-    width: 40%;
-
-    &.full {
-      max-width: 100%;
-      width: 100%;
-    }
-
-    &.right {
-      float: right;
-    }
-    &.left {
-      float: left;
-    }
-    &:before {
-      content: "";
-      clear: both;
-      display: table;
-    }
   }
 }

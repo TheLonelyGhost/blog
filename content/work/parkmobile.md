@@ -1,5 +1,5 @@
 ---
-project: Reservations
+title: Reservations
 organization: Parkmobile
 featuredImg: /work/event-tickets.svg
 summary: |
