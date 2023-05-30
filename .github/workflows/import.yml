@@ -3,9 +3,9 @@ name: import
 
 on:
   # Automatically trigger at 00:00 every day:
-  # schedule:
-  #   - cron: '0 0 * * *' # daily
-  #
+  schedule:
+    - cron: '0 0 * * *' # daily
+
   # Manually trigger:
   workflow_dispatch:
 
