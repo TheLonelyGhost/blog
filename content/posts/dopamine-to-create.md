@@ -6,8 +6,9 @@ date: 2023-01-01T12:38:17-05:00
 Looking at the Nivenly Discord, I saw Hachyderm.io was having some HTTP 504 issues indicating some backend service was malfunctioning. This lead to a [link of a post-mortem](https://community.hachyderm.io/blog/2022/12/13/global-outage-504-timeouts/) last time this happened.
 
 {{% quote url="https://community.hachyderm.io/blog/2022/12/13/global-outage-504-timeouts/" title="blog.hachyderm.io" %}}
+
 - **19:06** `@dma` status.hachyderm.io updated acknowledging the root cause
-{{% /quote %}}
+  {{% /quote %}}
 
 This small snippet from the timeline sparked an urge. It was an urge to do web development for a running service, not just a static site or two&mdash;of which this very blog is one.
 

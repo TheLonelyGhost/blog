@@ -55,4 +55,3 @@ Some key concepts to keep it brief:
 - Enumerate organization- or project-specific caveats or changes to what is posted in linked content in the README
 - Show, don't describe. Give example and, where possible, include example output.
 - Plaintext is better, where possible. For terminal output, paste the output itself instead of embedding a screenshot
- 

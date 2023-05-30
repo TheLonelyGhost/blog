@@ -65,4 +65,3 @@ This means that energy throughout the day that would have been spent making myse
 Companies would not get this much productivity or benefit out of me if it were in-person, regardless of how awesome of a company it is to work for or how acceptable it is for me to go about my day without masking (I'd still wear a mask, regardless). I wouldn't be nearly as mentally and emotionally present for my wife and kids if I had to use that energy to not get on someone's to-fire list.
 
 Remote work has made me that much more successful. So why go into the office if you can do your job better remotely?
-

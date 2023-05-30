@@ -31,7 +31,7 @@ Make your shell script _executable documentation_. Write it by defining your own
 
 {{% /tip %}}
 
-##  Know your tools
+## Know your tools
 
 If you don't understand how a thing works, fix that. Learn about it. Pull back that abstraction layer and look under the hood.
 

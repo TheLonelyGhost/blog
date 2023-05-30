@@ -1,6 +1,6 @@
 ---
 aliases: [/snip/direnv-for-secure-coding.html]
-title: 'Direnv: for secure coding and kind documentation'
+title: "Direnv: for secure coding and kind documentation"
 date: 2017-06-01T14:43:22-04:00
 ---
 

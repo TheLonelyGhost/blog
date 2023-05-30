@@ -1,6 +1,6 @@
 ---
 aliases: [/post/inspec-doing-it-wrong.html]
-title: 'InSpec: You''re Doing It Wrong'
+title: "InSpec: You're Doing It Wrong"
 date: 2019-03-05T23:10:31-05:00
 tags: [devops, inspec]
 ---
