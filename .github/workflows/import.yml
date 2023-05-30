@@ -1,0 +1,27 @@
+---
+name: import
+
+on:
+  # Automatically trigger at 00:00 every day:
+  # schedule:
+  #   - cron: '0 0 * * *' # daily
+  #
+  # Manually trigger:
+  workflow_dispatch:
+
+jobs:
+  sync-from-notion-to-github:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Notion import
+        uses: thelonelyghost/notion-md-gen@master
+        env:
+          NOTION_SECRET: ${{ secrets.NOTION_API_TOKEN }}
+      - name: Format docs
+        uses: creyD/prettier_action@v3.1
+        with:
+          prettier_options: --write content/posts/**/*.md
+          commit_message: 'notion-md-gen: update articles (auto)'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

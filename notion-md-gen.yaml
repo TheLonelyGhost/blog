@@ -1,0 +1,11 @@
+notion:
+    databaseId: d1cf8a4e76cf41e4a7a60092b15c6f54
+    filterProp: Status
+    filterValue:
+        - Queued for Publishing
+    publishedValue: Published
+markdown:
+    shortcodeSyntax: hugo
+    postSavePath: content/posts
+    imageSavePath: static/images
+    imagePublicLink: /images
