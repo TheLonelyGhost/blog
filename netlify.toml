@@ -25,6 +25,35 @@
 #     X-Frame-Options = "DENY"
 #     X-XSS-Protection = "1; mode=block"
 
+# ======== BEGIN WEBFINGER ================
+[[redirects]]
+  from = "/.well-known/:action"
+  to = "https://toot.cafe/.well-known/:action?resource=acct:thelonelyghost@toot.cafe"
+  status = 200
+  [redirects.query]
+    resource = "acct:opensource@thelonelyghost.com"
+  [redirects.headers]
+    Referer = "https://www.thelonelyghost.com/.well-known/:action"
+
+[[redirects]]
+  from = "/.well-known/:action"
+  to = "https://toot.cafe/.well-known/:action?resource=acct:thelonelyghost@toot.cafe"
+  status = 200
+  [redirects.query]
+    resource = "acct:david@thelonelyghost.com"
+  [redirects.headers]
+    Referer = "https://www.thelonelyghost.com/.well-known/:action"
+
+[[redirects]]
+  from = "/.well-known/:action"
+  to = "https://toot.cafe/.well-known/:action?resource=acct:thelonelyghost@toot.cafe"
+  status = 200
+  [redirects.query]
+    resource = "acct:thelonelyghost@thelonelyghost.com"
+  [redirects.headers]
+    Referer = "https://www.thelonelyghost.com/.well-known/:action"
+# ======== END WEBFINGER ================
+
 [[plugins]]
 package = "netlify-plugin-checklinks"
 
