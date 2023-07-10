@@ -1,6 +1,6 @@
 ---
 created: "2023-04-15T05:53:00Z"
-name: 'Intro to Blogging: Engineer Edition'
+title: 'Intro to Blogging: Engineer Edition'
 tags:
     - knowledgebase
     - soft-skills
