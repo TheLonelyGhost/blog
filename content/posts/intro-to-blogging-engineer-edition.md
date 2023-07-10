@@ -1,11 +1,10 @@
 ---
-created: "2023-04-15T05:53:00Z"
 title: 'Intro to Blogging: Engineer Edition'
 tags:
     - knowledgebase
     - soft-skills
     - career-growth
-updated: "2023-07-10T04:41:00Z"
+date: "2023-07-10T04:41:00Z"
 ---
 
 Blogging is supposed to be super easy, low effort, and high reward. compare the effort it takes to produce a video for YouTube. Maybe how long it takes to code an application. Or publish an academic article. All of those make information you have to say publicly available, but how much work is put into it to get the content processed and over the finish line?
