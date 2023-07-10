@@ -82,4 +82,4 @@ A proprietary platform, [Notion](https://notion.so) allows me to compose my thou
 
 ### My issues with Notion
 
-It is a blackbox solution which seems to structure the stored data based on position in the Notion application. Any dynamic field is evaluated by the client instead of the server, which means they've written a language which is used to evaluate tjose dynamic fields into static values. Any third party converter would need to reimplement the underlying language, wothout a spec, on a different platform.
+It is a blackbox solution which seems to structure the stored data based on position in the Notion application. Any dynamic field is evaluated by the client instead of the server, which means they've written a language which is used to evaluate those dynamic fields into static values. Any third party converter would need to reimplement the underlying language, without a spec, on a different platform.
