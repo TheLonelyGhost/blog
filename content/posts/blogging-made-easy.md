@@ -1,8 +1,10 @@
 ---
-aliases: [/post/blogging-made-easy.html]
+aliases:
+    - /post/blogging-made-easy.html
 title: Blogging made easy
 date: 2018-01-28T23:10:31-05:00
-tags: [workflow]
+tags:
+    - workflow
 ---
 
 Since starting this blog, I've encountered any number of topics where I've literally said, "Maybe I'll write a blog post about that..." The biggest hinderance has always been thus:
@@ -61,7 +63,7 @@ By the time I got to [SimpleNote][simplenote], [Automattic][automattic] had long
 
 ### My issues with SimpleNote
 
-As stated previously, it almost feels like I'm working with WordPress again. That leaves me feeling a bit slimy due to my own biases.
+As stated previously, it almost feels like I'm working with WordPress again. it doesn't (yet) allow me to link to other notes and transpose them to another platform. It doesn't allow me to organize my notes into ones that are on a particular topic or ready to publish. It also doesn't let me see how long-winded I am in rendered markdown while also editing it.
 
 Honestly, that’s about it. [SimpleNote][simplenote] allows me to seamlessly write from my desktop, my phone, or some random computer with an internet connection and a web browser.
 
@@ -74,6 +76,10 @@ Honestly, that’s about it. [SimpleNote][simplenote] allows me to seamlessly wr
 [symperium]: https://techcrunch.com/2013/01/24/wordpress-simperium-simplenote/
 [wordpress]: https://www.wordpress.org/
 
----
+## Notion
 
-Next up, what does my blogging workflow look like with SimpleNote? That’s where you’ll have to wait for part 2.
+A proprietary platform, [Notion](https://notion.so) allows me to compose my thoughts in a knowledgbase that already is built for organization, displaying data in a way that works with your brain, and optimized for entirely keyboard-driven operation. Until 2022 it did not have a public API upon which to build stable integrations. Now it does. Now others have built them to extract the WYSIWYG elements they call "blocks" and transform them into markdown with good accuracy. With a bit more time and effort, the translation of Notion blocks to markdown could improve to handle Hugo's shortcodes, which help with custom layouts of content.
+
+### My issues with Notion
+
+It is a blackbox solution which seems to structure the stored data based on position in the Notion application. Any dynamic field is evaluated by the client instead of the server, which means they've written a language which is used to evaluate tjose dynamic fields into static values. Any third party converter would need to reimplement the underlying language, wothout a spec, on a different platform.
