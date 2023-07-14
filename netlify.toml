@@ -55,6 +55,9 @@
 # ======== END WEBFINGER ================
 
 [[plugins]]
+package = "netlify-plugin-hugo-cache-resources"
+
+[[plugins]]
 package = "netlify-plugin-checklinks"
 
   [plugins.inputs]
