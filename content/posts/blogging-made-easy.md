@@ -46,7 +46,7 @@ What's the other option? Well, I would have to rewrite every single blog post by
 Writing using a [WYSIWYG][wysiwyg] editor is enough of a hinderance, but having to transpose manually afterwards? That's a hard no. Too much overhead to write a simple blog post.
 
 [evernote]: https://www.evernote.com/
-[nixnote]: http://www.nixnote.org/
+[nixnote]: https://web.archive.org/web/20230412061849/http://www.nixnote.org/
 [wysiwyg]: https://en.wikipedia.org/wiki/WYSIWYG
 
 ## SimpleNote
