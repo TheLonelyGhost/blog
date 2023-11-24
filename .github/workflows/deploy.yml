@@ -17,12 +17,18 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@v4
       - name: Build and test
         run: |
-          nix develop --command make build test build-prod
+          nix develop --command make build test
   deploy:
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
+      - uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v4
+      - name: Build and test
+        run: |
+          nix develop --command make build-prod
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
