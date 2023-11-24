@@ -1,3 +1,5 @@
+URL := https://www.thelonelyghost.com/
+
 ifndef HUGO
 	HUGO := hugo
 endif
@@ -13,6 +15,10 @@ serve:
 .PHONY: build
 build:
 	$(HUGO)
+
+.PHONY: build-prod
+build-prod:
+	$(HUGO) --minify --baseURL $(URL)
 
 .PHONY: test
 test:
