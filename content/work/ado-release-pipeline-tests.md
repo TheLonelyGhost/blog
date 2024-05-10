@@ -15,8 +15,6 @@ Used during a migration of 93 discrete applications and libraries from Jenkins +
 <caption><em>Credit: <a href="https://devblogs.microsoft.com/devops/automating-releases-in-github-through-azure-pipelines/" rel="nofollow">devblogs.microsoft.com</a></em></caption>
 </figure>
 
-<small></small>
-
 [PyTest]: https://docs.pytest.org/en/latest/
 
 ## Platform
