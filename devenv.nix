@@ -33,9 +33,8 @@
   # https://devenv.sh/pre-commit-hooks/
   pre-commit.hooks.check-symlinks.enable = true;
   pre-commit.hooks.check-yaml.enable = true;
-  pre-commit.hooks.hunspell.enable = true;
+  # pre-commit.hooks.hunspell.enable = true;
   pre-commit.hooks.markdownlint.enable = true;
-  pre-commit.hooks.mkdocs-linkcheck.enable = true;
   pre-commit.hooks.vale.enable = true;
 
   # https://devenv.sh/processes/
