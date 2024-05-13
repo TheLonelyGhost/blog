@@ -10,7 +10,7 @@ endif
 
 .PHONY: serve
 serve:
-	$(HUGO) serve
+	$(HUGO) serve --buildDrafts
 
 .PHONY: build
 build:
