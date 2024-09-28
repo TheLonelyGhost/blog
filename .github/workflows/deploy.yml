@@ -2,33 +2,92 @@
 name: deploy
 
 on:
+  repository_dispatch:
+  workflow_dispatch:
   push:
     branches:
       - '*'
 
-  workflow_dispatch:
-
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    if: github.ref != 'refs/heads/main'
+    # needs: test
+    #
+    env:
+      HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+      HUGO_ENV: 'staging'
+      HUGO_ENABLEGITINFO: 'true'
+      HUGO_VERSION: '0.120.3'
+      TZ: America/New_York
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v4
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v4
-      - name: Build and test
+        with:
+          submodules: recursive  # Fetch Hugo themes (true or recursive)
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Build
         run: |
-          nix develop --accept-flake-config --command make build test
+          hugo \
+            --gc \
+            --minify
+
   deploy:
-    needs: test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main'
+    environment:
+      name: Cloudflare
+      url: ${{ env.SITE_URL }}
+    env:
+      HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+      HUGO_ENV: 'production'
+      HUGO_ENABLEGITINFO: 'true'
+      HUGO_VERSION: '0.120.3'
+      SITE_URL: https://www.thelonelyghost.com/
+      TZ: America/New_York
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v4
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v4
-      - name: Build and test
+        with:
+          submodules: recursive  # Fetch Hugo themes (true or recursive)
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Build
         run: |
-          nix develop --accept-flake-config --command make build-prod
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${SITE_URL}"
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
