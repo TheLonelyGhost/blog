@@ -2,7 +2,6 @@
 aliases: [/note/local-gems-with-bundler.html]
 title: Local gems with Bundler
 date: 2016-12-28T17:27:06-05:00
-tags: [note-to-self, ruby]
 ---
 
 Testing an unreleased version of a gem? Want to develop 2 unreleased projects

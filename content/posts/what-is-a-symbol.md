@@ -2,12 +2,11 @@
 aliases: [/post/what-is-a-symbol.html]
 title: What is a Symbol?
 date: 2017-10-09T23:02:00-04:00
-tags: [computer-science]
 ---
 
-As I was browsing twitter this evening, I came across [a tweet by @searls asking newer rubyists (&lt;5 years) what some still confusing concepts are in Ruby](https://twitter.com/searls/status/917392217140072449). The most common concept that remained confusing was symbols, so here’s my explanation of it.
+As I was browsing Twitter this evening, I came across [a tweet by @searls asking newer rubyists (&lt;5 years) what some still confusing concepts are in Ruby](https://x.com/searls/status/917392217140072449). The most common concept that remained confusing was symbols, so here’s my explanation of it.
 
-In order to explain symbols, I must first explain datatypes.
+To explain symbols, I must first explain datatypes.
 
 ## Datatypes
 
@@ -30,13 +29,13 @@ A computer thinks in binary, ones and zeros. Binary can represent any number, su
 - `000111` &rarr; seven
 - `001000` &rarr; eight
 
-Get the idea? If we continue with this pattern, we’ll see that we eventually hit `111111` (sixty-three), but that’s not the last number there exists, is it? We need another digit to hold a zero or one and it represents all the way up to one-hundred twenty-seven. Wow, that’s quite a jump, right? How does all of this have anything to do with data types?
+Get the idea? If we continue with this pattern, we’ll see that we eventually hit `111111` (sixty-three), but that’s not the last number there exists, is it? We need another digit to hold a zero or one, and it represents all the way up to one-hundred twenty-seven. Wow, that’s quite a jump, right? How does all of this have anything to do with data types?
 
 ### Datatypes in binary
 
 A computer has to store a representation of data in memory. But wait, didn’t we just cover that a computer thinks in binary? Well that’s still true. We have to come up with a shorthand for storing things like `1.3` in binary.
 
-Let’s tear this apart. This is a float datatype. We have to come up with some shorthand for noting what is before the decimal point and what is after. How about we say the first four digits are the number before the decimal point and the last four are the number after. We can extend this beyond eight digits later.
+Let’s tear this apart. This is a float datatype. We have to come up with some shorthand for noting what is before the decimal point and what is after. How about we say the first four digits are the number before the decimal point, and the last four are the number after. We can extend this beyond eight digits later.
 
 In this case the binary representation of `1.3` might be `00010011`. What’s the difference between this and the integer `19`? Both are represented by the same binary, right? We’ll need to come up with some universal shorthand to note the difference.
 
@@ -57,7 +56,7 @@ To integrate this we’ll tack this onto the starting of each value and just rem
 
 ### Data maximums/minimums
 
-In order to have all of these shorthands, we have to agree on the next _X_ number of digits which will signify the value of the datatype. A boolean, true and false, only needs one digit (plus the header) while an unsigned integer can only count between 0 and 127 with 3 digits, which might not be enough for fun things like counting the number of seats in a stadium.
+To have all of these shorthands, we have to agree on the next _X_ number of digits, which will signify the value of the datatype. A boolean, true and false, only needs one digit (plus the header) while an unsigned integer can only count between 0 and 127 with 3 digits, which might not be enough for fun things like counting the number of seats in a stadium.
 
 We’ll come up with some arbitrary lengths of digits for these datatypes. Here are some examples:
 
@@ -78,7 +77,7 @@ What?
 
 Okay, let's tear it apart again.
 
-If we saw just this binary without any other context, we can remember our shorthand for the headers by reading left to right. The first 3 digits signify it’s a boolean, which we know has a value length of 1 digit. We read it as boolean `false` and we’ve parsed the first 4 digits in the example data.
+If we saw just this binary without any other context, we can remember our shorthand for the headers by reading left to right. The first 3 digits signify it’s a boolean, which we know has a value length of 1 digit. We read it as boolean `false`, and we’ve parsed the first 4 digits in the example data.
 
 Since we're done with the first 4, we'll start at digit 5, follow along the same pattern with interpreting the first 3 digits as the datatype (`100` = float), and parse the next _X_ digits (float value &rarr; 13 digits) as the value. The next 13 digits amount to `0000000010011`, which we’ll pretend like we already established a new shorthand where floats have the last 3 digits reserved for the decimal number. This makes it easier since we remember this was `1.3`.
 
@@ -90,7 +89,7 @@ The next three digits after that’s done is `001`, which means a character. You
 
 ## Characters versus Strings
 
-In case you weren’t already aware, a character might represent any one key on your keyboard, including letters, numbers, punctuation (like `?` and `!`), or other bits of written language (like `{` or `)`). A character can make up individual letters you might not see on your keyboard, like “é” or “→”. The point is, a character can be a large number of possible values taking up the same physical space on your screen as a 1 or 0.
+In case you weren’t already aware, a character might represent any one key on your keyboard, including letters, numbers, punctuation (like `?` and `!`), or other bits of written language (like `{` or `)`). A character can make up individual letters you might not see on your keyboard, like “é” or “→”. The point is, a character can be numerous possible values taking up the same physical space on your screen as a 1 or 0.
 
 Going back to what was said before, computers think in binary. We could come up with a way to store every character, mapping to a numerical value. These are called character encodings. Like other datatypes this tells us how many digits each character will take up. A character might be ASCII and be only what you might see on a QWERTY keyboard, or it might be UTF-8 and include emoji and other richer styles of a character. For the sake of simplicity, we’ll stick with ASCII.
 
@@ -98,19 +97,19 @@ There are 26 letters in the english alphabet, plus 11 special symbol keys (upper
 
 To make a string like `"Hello world!"`, we need to disect it. It’s the character `H`, then the character `e`, then the character `l`, and so on for the word “Hello”.
 
-Wait a second, we have capital letters here too?! Shoot. Let’s amend our count of 69 characters to add in 26 more, 1 more for each letter of the alphabet in its capital form. That’s a total of 95 possible characters. Good thing our 7 bits are able to store a representation of any number between 0 and 127.
+Wait. We have capital letters here too?! Shoot. Let’s amend our count of 69 characters to add in 26 more, 1 more for each letter of the alphabet in its capital form. That’s a total of 95 possible characters. Good thing our 7 bits can store a representation of any number between 0 and 127.
 
 So we have “Hello” and “world!” separated by a space character, which amounts to 12 characters. Since each character takes up 10 bits (3 header + 7 value), we’re looking at 120 bits to render `"Hello world!"` as binary data. Here’s where I’m going to stop while you to ponder that for a minute.
 
 ## Symbol datatype
 
-Let’s assume you have a mapping of characters to bit values and the maximum bits mapped out perfectly. You have that string that takes up 12 characters for 120 bits just to say hello to the world. What if there’s something you only want to reference internally for your own purposes? We don’t care about the actual value, we just care that the value happens to be unique from any other value. It has semantic meaning only. You know how we have those mappings of letters, base10 numbers, etc. to binary? Those are the same concept of a symbol. That’s part of the `char` shorthand. What if we took it a step further?
+Let’s assume you have a mapping of characters to bit values, and the maximum bits mapped out perfectly. You have that string that takes up 12 characters for 120 bits just to say hello to the world. What if there’s something you only want to reference internally for your own purposes? We don’t care about the actual value, we just care that the value happens to be unique from any other value. It has semantic meaning only. You know how we have those mappings of letters, base10 numbers, etc. to binary? Those are the same concept of a symbol. That’s part of the `char` shorthand. What if we took it a step further?
 
 First, after all that binary-talk, I need to take my head out of the theoretical for a moment. I need to go back to the programming I know: Ruby, Python, etc.
 
-Ruby and Python are dynamic languages where you rarely have to know how many bits in memory a variable, holding a particular datatype, will take up. The way I operate, I care about how easily I can keep the inner workings of a program in my head at any one time. I need cues that won’t matter to the computer, but do only to me as the programmer. Take a logging class (in most any language), for example.
+Ruby and Python are dynamic languages where you rarely have to know how many bits in memory a variable, holding a particular datatype, will take up. The way I operate, I care about how easily I can keep the inner workings of a program in my head at any one time. I need cues that won’t matter to the computer, but do only to me as the programmer. Take a logging class (in most languages), for example.
 
-We have the concept of a logger which takes an enum of various error levels: `ERROR`, `WARN`, `INFO`, `DEBUG`, and possibly more. Do we care about storing the string of characters to represent it? No. We just need some internal representation to reference. Let’s choose a datatype that has a really small memory footprint here.
+We have the concept of a logger, which takes an enum of various error levels: `ERROR`, `WARN`, `INFO`, `DEBUG`, and possibly more. Do we care about storing the string of characters to represent it? No. We just need some internal representation to reference. Let’s choose a datatype that has a really small memory footprint here.
 
 Representing `"ERROR"` (as a string) would be 5 characters × 10 bits per character = 50 bits. Other logging levels might be greater or fewer characters in number, so we just need to have a datatype less than 50 bits, or binary digits long to stand in for the one other, more memory intensive value. Let’s choose the unsigned integer `4`, and the other logging levels as unsigned integers as well. We don’t care about the value `4`, only what it represents, so it could just as easily be `986` or a poop emoji. It is meant to differentiate `ERROR` from `WARN` and the others.
 
@@ -118,15 +117,15 @@ So the unsigned integer `4` is represented with `010000000100` in binary. That�
 
 In a language like ruby, a small savings like that might not make too big of a difference, but say it could encode it in binary instead of unsigned integer, with all the wasted space up front reclaimed. We only need the first 3 bits for the header and the 3 bits following for the value of `4`. What if our compiler was smart enough to see we only needed a maximum value of `4`?
 
-In that case, we could remember a new datatype that says the following _X_ digits represent a symbol, where _X_ is determined once the entire program is analyzed to figure out the max value one might ever see. In our case, it’s 4 so we downsize the number of bits used from 12 to 6. What once was `010000000100` is now `010100`.
+In that case, we could remember a new datatype that says the following _X_ digits represent a symbol, where _X_ is determined once the entire program is analyzed to figure out the max value one might ever see. In our case it’s 4, so we downsize the number of bits used from 12 to 6. What once was `010000000100` is now `010100`.
 
-But wait, we still have the datatype header for an unsigned integer! That’ll screw everything up! That’s very true. We can't keep breaking our own shorthand conventions with encoding/decode binary, so we’ll have to come up with a new, on-the-fly datatype which we’ll refer to as a symbol. It’ll go by the header `101`, since it hasn’t been used yet.
+But wait, we still have the datatype header for an unsigned integer! That’ll screw everything up! That’s very true. We can't keep breaking our own shorthand conventions with encoding/decode binary, so we’ll have to come up with a new, on-the-fly datatype, which we’ll refer to as a symbol. It’ll go by the header `101`, since it hasn’t been used yet.
 
-From the original 50 bits, to `010000000100` (12 bits), to `101100` (6 bits), that’s quite a bit of downsizing for the exact same functionality as far as both the programmer and the end user are concerned.
+From the original 50 bits, to `010000000100` (12 bits), to `101100` (6 bits), that’s quite a bit of downsizing for the same functionality; the same functionality from the programmer's and the end user's perspective.
 
 ## Recap
 
-Symbols are just what they sound like: an in-memory stand-in value for something else. Their function is to save on memory usage when you don’t need to allocate a ton of bits in order to have a label that only needs to represent that it's different from other labels. The values don't actually matter. They are a handy representation which shifts work onto the compiler initially, but nets less memory (and equal computation power) at runtime.
+Symbols are just what they sound like: an in-memory stand-in value for something else. Their function is to save on memory usage when you don’t need to allocate a ton of bits to have a label that only needs to represent that it's different from other labels. The values don't actually matter. They are a handy representation, shifting work onto the compiler initially, but nets less memory (and equal computation power) at runtime.
 
 ## Moving forward
 

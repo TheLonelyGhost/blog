@@ -1,10 +1,6 @@
 ---
 title: "Neurodivergence and Remote Work"
 date: 2022-06-05T16:10:40-04:00
-tags:
-  - remotework
-  - neurodivergence
-  - career
 ---
 
 I'm seeing an influx of people talking about "everyone back to the office!" with responses like "lol, I moved. When should I expect the travel itinerary with accommodations you've booked?" I too have moved. I too would respond this way. I too believe if I am able to do my job well remotely, it _shouldn't friggin' matter_ if you've spent millions of dollars on a state of the art office. Your poor investment is not my problem.

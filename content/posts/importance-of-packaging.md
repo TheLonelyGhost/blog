@@ -2,7 +2,6 @@
 aliases: [/post/importance-of-packaging.html]
 title: On the Importance of Packaging
 date: 2017-06-06T10:18:53-04:00
-tags: [development, workflow, open-source]
 ---
 
 You have an idea and want to turn it into a bit of code to carry it out. What do you do? You open up your IDE/Editor, perhaps you structure it inside of a folder with some default tooling for linting and (if necessary) compiling, and you get the code to work. It's hacky, it's ugly, but it works.

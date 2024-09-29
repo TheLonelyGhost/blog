@@ -2,7 +2,6 @@
 aliases: [/post/inspec-doing-it-wrong.html]
 title: "InSpec: You're Doing It Wrong"
 date: 2019-03-05T23:10:31-05:00
-tags: [devops, inspec]
 ---
 
 I've been using [InSpec](https://community.chef.io/tools/chef-inspec) for over 2 years now and have been writing automated tests for longer than that. What's the one thing that I've seen trip up the most people? Useless tests.

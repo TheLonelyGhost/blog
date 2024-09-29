@@ -1,9 +1,5 @@
 ---
 title: 'Intro to Blogging: Engineer Edition'
-tags:
-    - knowledgebase
-    - soft-skills
-    - career-growth
 date: "2023-07-10T04:41:00Z"
 ---
 

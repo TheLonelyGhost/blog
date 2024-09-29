@@ -2,9 +2,6 @@
 created: "2021-02-14T21:29:00Z"
 draft: true
 name: "Vault: A Tourist's Walkthrough"
-status: Queued for Publishing
-tags:
-  - devops
 updated: "2023-05-30T23:44:00Z"
 ---
 

@@ -2,7 +2,6 @@
 aliases: [/post/intro-to-rclone.html]
 title: Intro to rclone
 date: 2017-04-19T14:23:19-04:00
-tags: [automation, cli, backups]
 ---
 
 The other day, as I was looking for a way to keep Vivaldi in sync across my devices, I stumbled onto a paid product which syncs a local directory with a remote one on one of a few cloud providers. My main ones I like to use are Dropbox, Google Drive, and MediaFire, but I would like to be able to use S3 and other more robust options for when I start scaling up in my storage needs. The problem was that this paid product had a high price tag, showed up in forum spam (and I don't want to encourage that method of marketing), and it only worked with a handful of providers. It did not support Google Drive, for instance.

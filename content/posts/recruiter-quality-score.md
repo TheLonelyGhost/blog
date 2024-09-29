@@ -2,7 +2,6 @@
 aliases: [/note/recruiter-quality-score.html]
 title: Recruiter quality score
 date: 2017-06-20T14:35:00-04:00
-tags: [note-to-self, job-hunt]
 unlisted: true
 hiddenFromHomePage: true
 ---

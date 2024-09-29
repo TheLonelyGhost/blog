@@ -3,8 +3,6 @@ aliases:
     - /post/blogging-made-easy.html
 title: Blogging made easy
 date: 2018-01-28T23:10:31-05:00
-tags:
-    - workflow
 ---
 
 Since starting this blog, I've encountered any number of topics where I've literally said, "Maybe I'll write a blog post about that..." The biggest hinderance has always been thus:
@@ -21,6 +19,8 @@ Behind the scenes, [Netlify CMS][netlify-cms] creates a new branch off of `maste
 
 ### My issues with Netify CMS
 
+> **NOTE:** Netlify CMS was renamed to Decap CMS in February 2023. ([announcement](https://www.netlify.com/blog/netlify-cms-to-become-decap-cms/))
+
 First off, the drafts of your blog posts will always be publicly available. Something so public so early on is not conducive to stress-free brainstorming or just getting started with writing. I get it though, it's super intelligent to store the data on Github's side instead of committing to any data storage by Netlify. It also makes it so you have one less dependency for storing drafts. This is a trade-off they have clearly considered and I just have to deal with the consequences.
 
 My second issue is that, when I last tinkered with it, [Netlify CMS][netlify-cms] had some show-stopping issues in integrating it with a Middleman site. The biggest one had to do with file extensions not being honored in the expected manner. It seems Jekyll was the favored child.
@@ -29,7 +29,7 @@ Thirdly, if you prefer Gitlab for source code storage, you're SOL--and reasonabl
 
 There is nothing inherently wrong with [Netlify CMS][netlify-cms], in fact I applaud its existence and would love to see it grow. It just isn't the right tool for my situation.
 
-[netlify-cms]: https://www.netlifycms.org/
+[netlify-cms]: https://decapcms.org/
 
 ## Evernote
 
