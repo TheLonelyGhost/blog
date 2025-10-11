@@ -17,6 +17,7 @@ in {
 
   # https://devenv.sh/scripts/
   # scripts.hello.exec = "echo hello from $GREET";
+  scripts.linkchecker.exec = "${pkgs.lychee}/bin/lychee -u \"$('${pkgs.curl}/bin/curl' --silent https://deviceandbrowserinfo.com/api/user_agents/all | '${pkgs.jq}/bin/jq' -r --argjson rand \"$RANDOM\" '.humans[\"Mac OS;;Chrome\"] | .[$rand % length] | .userAgent')\" \"$@\"";
 
   # enterShell = ''
   #   hello
