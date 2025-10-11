@@ -1,0 +1,8 @@
+<section class="example message is-dark">
+	<header class="message-header">
+		<p>Example{% if title %}: {{title}}{% endif %}</p>
+	</header>
+	<div class="message-body">
+		{{body | markdown | safe}}
+	</div>
+</section>

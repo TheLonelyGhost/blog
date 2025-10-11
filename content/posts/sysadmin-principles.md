@@ -19,7 +19,7 @@ What does this mean?
 
 By keeping things simple, reproduceable, and close to their defaults, this sets a sysadmin up for success _when_ things go wrong. More so, by keeping things close to the default settings you maximize the chance that your setup overlaps someone else's. Bonus to finding info on Stack Overflow or [that one forum post](https://xkcd.com/979/)!
 
-{{% tip title="TIP: Script it out" href="tip-script-it" %}}
+{% tip(title="TIP: Script it out", href="tip-script-it") %}
 
 By scripting out everything you do, no matter how small, this ensures you can walk away mid-thought and pick up where you left off later.
 
@@ -29,7 +29,7 @@ By scripting out everything you do, no matter how small, this ensures you can wa
 
 Make your shell script _executable documentation_. Write it by defining your own shell functions describing each step you're taking.
 
-{{% /tip %}}
+{% end %}
 
 ## Know your tools
 
@@ -45,7 +45,7 @@ In a sysadmin context, compile time can mean "the stuff done to configure and se
 
 In contrast, runtime means "stuff being done as the application is being put into its 'running' state."
 
-{{% example title="Docker" %}}
+{% example(title="Docker") %}
 
 Some container images contain a shell script as an entrypoint (e.g., `entrypoint.sh`). These shift some compile time tasks to execute at runtime, then defer to running the underlying application.
 
@@ -58,7 +58,7 @@ Actions taken in a `Dockerfile` when `docker build` is run are considered "compi
 
 Actions taken when running `docker exec`/`docker run` are considered "runtime."
 
-{{% /example %}}
+{% end %}
 
 Complexity costs at compile time need only be paid down once: when things are being setup.
 

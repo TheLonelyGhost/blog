@@ -29,22 +29,3 @@ Okay, security aside. Let's assume I have multi-factor authentication on everyth
 This email keeps coming. Notice the list of recipients? The fact that I can see them means the sender didn't use the BCC field, as is convention. If you haven't been part of a reply-all rage-fest, I do not recommend it. One recipient hits reply-all because maybe the opportunity interests them, maybe they're being a good netizen and replying to every email inquiry they receive, or maybe they have a vacation responder set for _every_ incoming email. If multiple vacation responders do what they're intended? You have an exponentially growing chain of responses. Hopefully it's just 2 auto-responders, in that event.
 
 Okay, no one has vacation responders setup to reply to anyone in this case. What's wrong with the TO or CC field? Do you remember the Github API abuse mentioned earlier? Anyone else who received that email is able to pull in every other address on the list into their own, spammy sales pipeline. And the cycle continues...
-
----
-
-Okay. Now that I've ranted, let's talk about my scoring this recruiter against my [checklist of pet peeves][recruiter-checklist]:
-
-```
--  7  # emailed my personal address
-- 50  # Mass email using TO or CC field
-- 30  # No unsubscribe link on a mass email
-+ 40  # (Remediation) Attempt to recall email after discovering mistake
-+ 20  # (Exactness of fit)
-+ 10  # Worked with ths recruiting firm on prior occasion, with at least 1 submission
-====
-- 17  # Total
-```
-
-According to my own scoring system, this recruiter and their firm are on probation before completely blacklisting. That said, I'm fickle and remediation pretty highly. Since there was effort to correct a mistake, I wouldn't blacklist them, but I am still pretty miffed that they made this mistake.
-
-[recruiter-checklist]: /note/recruiter-quality-score.html

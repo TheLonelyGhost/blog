@@ -36,7 +36,7 @@ Neurodivergent people may go undiagnosed with ASD, ADHD, or other labels for yea
 
 Masking takes energy to suppress what behaviors come naturally. Anecdotally, I see a lot of neurodivergent people also identifying as introverted.
 
-{{% tip title="Introversion vs. Extraversion" %}}
+{% tip(title="Introversion vs. Extraversion") %}
 
 Introversion can be defined as requiring use of energy to engage is social behavior. Some behaviors take more energy than others. Recharging energy is often done through solitary activities such as reading, sleeping, knitting, or playing video games.
 
@@ -44,7 +44,7 @@ Extraversion is just the opposite: social behavior results in recharging energy.
 
 Introversion and extraversion can be considered a spectrum. Rarely is a person purely extraverted or purely introverted.
 
-{{% /tip %}}
+{% end %}
 
 I, for example, mask to put on a kind face, actively listening, and expressions on my face that empathize with the person speaking. Though I genuinely feel that empathy, kindness, and desire to actively listen, it doesn't come as naturally to me as it might for others. I consciously do it. And it takes energy.
 

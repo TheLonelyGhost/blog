@@ -4,9 +4,19 @@ title: What is a Symbol?
 date: 2017-10-09T23:02:00-04:00
 ---
 
-As I was browsing Twitter this evening, I came across [a tweet by @searls asking newer rubyists (&lt;5 years) what some still confusing concepts are in Ruby](https://x.com/searls/status/917392217140072449). The most common concept that remained confusing was symbols, so here’s my explanation of it.
 
-To explain symbols, I must first explain datatypes.
+As I was browsing Twitter this evening, I came across a peculiar tweet:
+
+<figure class="quote">
+    <blockquote url="https://x.com/searls/status/917392217140072449">
+        <p>Ruby friends who've been writing Ruby for ~5 years or less: what sort of things did you find surprising and need someone to explain to you?</p>
+    </blockquote>
+    <figcaption>
+        <cite>Tweeted <a rel="nofollow noopener" href="https://x.com/searls/status/917392217140072449"><time class="relative" datetime="2017-10-09T10:12:00-04:00">10:12am - 9 Oct 2017</time></a> by Justin Searls (<a rel="nofollow noopener" href="https://x.com/searls">@searls</a>)</cite>
+    </figcaption>
+</figure>
+
+The most common concept that remained confusing was symbols, so here’s my explanation of it. To explain symbols, I must first explain datatypes.
 
 ## Datatypes
 

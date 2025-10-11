@@ -22,10 +22,10 @@ Let's break these down into more consumable pieces.
 
 This part is a relatively minor, semantics change for clarity and consistent brand. Here's a quick guide:
 
-- `Chef` (config management tool) -> `Chef Infra`
-- `Habitat` -> `Chef Habitat`
-- `InSpec` -> `Chef InSpec`
-- `Automate` -> `Chef Automate`
+- `Chef` (config management tool) &rarr; `Chef Infra`
+- `Habitat` &rarr; `Chef Habitat`
+- `InSpec` &rarr; `Chef InSpec`
+- `Automate` &rarr; `Chef Automate`
 
 As part of this rebranding, Chef (hereafter a term used solely to refer to the company) will be bundling their individual products as part of an "Effortless Infrastructure" and "Enterprise Automation" stack. This becomes important later.
 
@@ -56,10 +56,10 @@ A quick list of reported exceptions to the license requirements for binaries, th
 
 Starting with the following versions, the new EULA for this commercial license will be included:
 
-- Chef Habitat -- (version not yet disclosed)
-- Chef Infra -- v15.0
-- Chef InSpec -- v4.0
-- Chef Automate -- (first publicly available version)
+- Chef Habitat &mdash; (version not yet disclosed)
+- Chef Infra &mdash; v15.0
+- Chef InSpec &mdash; v4.0
+- Chef Automate &mdash; (first publicly available version)
 
 Development of the products is still to take place in the open. In fact, Adam Jacob made a call to the open source community to [continue to collaborate][adam-jacob-blog-post] on the products and take advantage of the fact that it is still open source. He also made generalizations that this is entirely intentional so Chef can rely less on the "heroes" and "martyrs" who work on the previously closed source applications, inevitably burning themselves out. Instead, that burden can shift to anyone from the community who wishes to undertake contributing to the previously proprietary software in as big or small of a way as they wish.
 

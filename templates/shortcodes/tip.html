@@ -1,0 +1,8 @@
+<section class="tip message is-info">
+	<header class="message-header">
+		<p>{% if href %}<a name="{{href}}"></a>{% endif %}{{title | default(value="TIP")}}</p>
+	</header>
+	<div class="message-body">
+		{{body | markdown | safe}}
+	</div>
+</section>
