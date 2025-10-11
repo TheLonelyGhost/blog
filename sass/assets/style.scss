@@ -1,0 +1,8 @@
+figure.quote {
+  padding-bottom: 1rem;
+
+  & > figcaption {
+    text-align: right;
+    font-size: 0.8rem;
+  }
+}

@@ -10,15 +10,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     if: github.ref != 'refs/heads/main'
     # needs: test
     #
     env:
-      HUGO_CACHEDIR: /tmp/hugo_cache
-      HUGO_ENV: 'staging'
-      HUGO_ENABLEGITINFO: 'true'
-      HUGO_VERSION: '0.120.3'
       TZ: America/New_York
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -28,36 +24,33 @@ jobs:
           submodules: recursive  # Fetch Hugo themes (true or recursive)
           fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - name: Setup Zola
+        uses: taiki-e/install-action@v2
         with:
-          hugo-version: ${{ env.HUGO_VERSION }}
-          extended: true
+          tool: zola@0.19.1
 
-      - uses: actions/cache@v4
-        with:
-          path: ${{ env.HUGO_CACHEDIR }}
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
+      # - uses: actions/cache@v4
+      #   with:
+      #     path: ${{ env.HUGO_CACHEDIR }}
+      #     key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-hugomod-
 
       - name: Build
         run: |
-          hugo \
-            --gc \
-            --minify
+          zola check --drafts
 
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     environment:
       name: Cloudflare
       url: ${{ env.SITE_URL }}
     env:
-      HUGO_CACHEDIR: /tmp/hugo_cache
-      HUGO_ENV: 'production'
-      HUGO_ENABLEGITINFO: 'true'
-      HUGO_VERSION: '0.120.3'
+      # HUGO_CACHEDIR: /tmp/hugo_cache
+      # HUGO_ENV: 'production'
+      # HUGO_ENABLEGITINFO: 'true'
+      # HUGO_VERSION: '0.120.3'
       SITE_URL: https://www.thelonelyghost.com/
       TZ: America/New_York
     concurrency:
@@ -68,25 +61,21 @@ jobs:
           submodules: recursive  # Fetch Hugo themes (true or recursive)
           fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - name: Setup Zola
+        uses: taiki-e/install-action@v2
         with:
-          hugo-version: ${{ env.HUGO_VERSION }}
-          extended: true
+          tool: zola@0.19.1
 
-      - uses: actions/cache@v4
-        with:
-          path: ${{ env.HUGO_CACHEDIR }}
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
+      # - uses: actions/cache@v4
+      #   with:
+      #     path: ${{ env.HUGO_CACHEDIR }}
+      #     key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-hugomod-
 
       - name: Build
         run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${SITE_URL}"
+          zola build --minify --base-url "${SITE_URL}" --output-dir ./public
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3

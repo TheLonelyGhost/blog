@@ -42,7 +42,7 @@ Step 4, profit!
 
 I have my GPG signing keys (password protected, of course) backed up on Dropbox, for this example. I need to grab those locally and import them.
 
-```shell
+```bash
 $ rclone copy dropbox:gpg_keys/opensource.secret.key ./personal.key
 $ rclone copy dropbox:gpg_keys/opensource.public.key ./personal.pub
 $ gpg2 --import --allow-secret-key-import ./personal.key
@@ -52,7 +52,7 @@ $ rm ./personal.key ./personal.pub
 
 If I wanted to be more security-conscious and do this in fewer steps, it looks like `gpg` allows streaming in the imports via STDIN. Let's try that route!
 
-```shell
+```bash
 $ rclone cat dropbox:gpg_keys/opensource.secret.key | gpg2 --import --allow-secret-key-import
 $ rclone cat dropbox:gpg_keys/opensource.public.key | gpg2 --import
 ```
@@ -61,7 +61,7 @@ $ rclone cat dropbox:gpg_keys/opensource.public.key | gpg2 --import
 
 Google Drive was originally intended for office-style documents, right? How about we sync it with our Documents directory?
 
-```shell
+```bash
 $ rclone sync drive:local-documents/ ~/Documents/google-drive
 ```
 
@@ -75,7 +75,7 @@ What if I don't recall what the directory structure is like on my cloud hosting 
 
 Here's an example of how I essentially use `find` (by name) with a remote provider.
 
-```shell
+```bash
 $ rclone ls drive: | grep 'some_file' | sed -e 's/^ *[0-9]* *//g'
 
 MyFiles__local/some_file.notes.txt

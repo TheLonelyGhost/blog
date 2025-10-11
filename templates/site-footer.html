@@ -1,0 +1,11 @@
+<footer class="footer">
+	<section class="content has-text-centered">
+		<p>&copy; {{now() | date(format="%Y")}} David Alexander</p>
+		<p><a href="{{get_url(path="@/disclaimer.md")}}">Disclaimer</a> | <a rel="license" href="{{get_url(path="@/license.md")}}">License</a></p>
+	</section>
+	<section class="block has-text-centered">
+		<figure class="image is-128x128 mx-auto">
+			<img src="/icon.svg" alt="Happy ghost" />
+		</figure>
+	</section>
+</footer>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block bodyclasses %}post index{% endblock bodyclasses %}
+
+{% block content %}
+<section class="content">
+	<h1 class="title">{{ section.title | default(value="Blog") | title }}</h1>
+
+	<ul>
+		{% for page in section.pages %}
+		<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a> <small>({{ macros::date(page_date=page.date, classes="relative") }})</small></li>
+		{% endfor %}
+	</ul>
+
+	{{ macros::bio() }}
+</section>
+{% endblock content %}

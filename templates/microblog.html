@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">{{ section.title | default(value="Microblog") | title}}</h1>
+
+{% for page in section.pages %}
+<article class="box">
+	<section class="media">
+		<div class="media-left">
+			<figure class="profile image is-48x48">
+				<img class="is-rounded" src="https://avatars.githubusercontent.com/u/1276113" alt="David Alexander smiling in photo" />
+			</figure>
+		</div>
+		<div class="media-content">
+			<p class="title is-4">David Alexander</p>
+			<p class="subtitle is-6">@thelonelyghost</p>
+		</div>
+	</section>
+	<div class="content">
+		{{ page.content | safe }}
+		<p><small><a href="{{page.permalink | safe}}">{{macros::date(page_date=page.date)}}</a></small></p>
+	</div>
+</article>
+{% endfor %}
+
+{% endblock content %}

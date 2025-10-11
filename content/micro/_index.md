@@ -1,6 +1,9 @@
----
-title: Implements Programmer
----
++++
+title = "Stream"
+sort_by = "date"
+template = "microblog.html"
+page_template = "microblog-post.html"
++++
 
 <aside style="margin-bottom:1em">
   <section class="bio" style="display:flex">

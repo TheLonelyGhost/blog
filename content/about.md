@@ -1,12 +1,13 @@
----
-title: Who Am I?
-lastmod: 2020-06-22T02:16:00Z
-date: 2020-06-21T14:30:00Z
----
++++
+title = "David Alexander"
+date = "2020-06-21T14:30:00Z"
++++
+
+<figure class="image is-128x128 is-pulled-left mr-2 mb-2">
+	<img class="is-rounded" src="https://avatars.githubusercontent.com/u/1276113" alt="Photograph of David Alexander" />
+</figure>
 
 I am a developer with a focus on openness: open source, open information, open honesty. Being a polyglot, I choose the right tool for the job. Often this leads me toward Ruby, JavaScript, open web standards, and one of many GNU/Linux operating systems.
-
-![Dingy workstation](/work/remote-work-desk.svg)
 
 Communication is difficult, no matter the organization. That super-secret project you work on that your coworker isn't allowed to know about doesn't encourage collaboration, neither does the cryptic wall of code without so much as a comment for documentation. These may seem necessary, but in my experience they often mark an unsustainable, "good enough" internal standard.
 
@@ -14,6 +15,6 @@ My career goal is to squash that "good enough" standard, facilitating an open fl
 
 Would you like to join me in this effort? Connect with me and let's see what impact we can have.
 
----
-
-All opinions expressed on this site are my own and do not necessarily reflect those of my employer. They may not even reflect my own opinions anymore, since these posts may have fallen severely out-of-date.
+<figure>
+	<img src="/img/remote-work-desk.svg" alt="Remote work laptop" />
+</figure>

@@ -1,0 +1,34 @@
+{% import "macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block pageTitle %}Implements Programmer{% endblock pageTitle %}</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="stylesheet" href="/assets/style.css" />
+
+		<link rel="webmention" href="https://webmention.io/www.thelonelyghost.com/webmention" />
+		<link rel="pingback" href="https://webmention.io/www.thelonelyghost.com/xmlrpc" />
+
+		<link rel="stylesheet" href="/vendor/bulma-1.0.4/css/bulma.min.css" />
+		<link rel="stylesheet" href="/vendor/boxicons-2.1.4/css/boxicons.min.css" />
+		<link rel="stylesheet" href="/vendor/boxicons-2.1.4/css/boxicons-brands.min.css" />
+		{%- block feed -%}
+		<link rel="alternate feed" type="application/atom+xml" title="{{ config.title }}" href="/posts/atom.xml" />
+		{%- endblock feed -%}
+		{% block head %} {% endblock head %}
+	</head>
+
+	<body class="{% block bodyclasses %}page{% endblock bodyclasses %} container is-max-widescreen">
+		{% include "site-header.html" ignore missing %}
+		<main class="block container is-max-desktop">
+			{% block content %} {% endblock content %}
+		</main>
+		{% include "site-footer.html" ignore missing %}
+		<script src="/js/transform.js"></script>
+	</body>
+</html>

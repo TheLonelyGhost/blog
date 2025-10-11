@@ -15,8 +15,8 @@ Leaving the `Gemfile` as such will screw with your project history, so we want
 the version of `Gemfile` as it will be when the gem is released, keeping that
 version in our "git memory". See the following:
 
-```shell
-bundle config local.some_gem "$(realpath ../my-dev-snapshot)"
+```bash
+$ bundle config local.some_gem "$(realpath ../my-dev-snapshot)"
 ```
 
 This will allow your `Gemfile` to remain pristine without the `path: '../foo'`
