@@ -1,12 +1,21 @@
 {% extends "base.html" %}
 
+{% block breadcrumbs %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+	<ol>
+		<li><a href="{{get_url(path="./projects") }}">Projects</a></li>
+		<li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+	</ol>
+</nav>
+{% endblock breadcrumbs %}
+
 {% block content %}
 <header class="block">
 	<h1 class="title">{{ page.title }}</h1>
-	<p class="subtitle"></p>
+	<p class="subtitle">{% if page.extra.organization %}{{ page.extra.organization }}{% endif %}</p>
 	<p class="level">
 		<span class="level-left">
-			<span class="level-item icon-text"><span class="icon"><i class="bx bx-calendar-alt"></i></span> <span>Posted {{ macros::date(page_date=page.date, fmt="%-d %b %Y", classes="relative") }}</span></span>
+			<!-- <span class="level-item icon-text"><span class="icon"><i class="bx bx-calendar-alt"></i></span> <span>Posted {{ macros::date(page_date=page.date, fmt="%-d %b %Y", classes="relative") }}</span></span> -->
 			<span class="level-item icon-text"><span class="icon"><i class="bx bx-book"></i></span> <span>{{ page.word_count }} words</span></span>
 			<span class="level-item icon-text"><span class="icon"><i class="bx bx-timer"></i></span> <span>{{ page.reading_time }} minute read</span></span>
 		</span>
@@ -16,5 +25,5 @@
 {{ page.content | safe }}
 </article>
 
-{{ macros::bio() }}
+{% include "bio.html" ignore missing %}
 {% endblock content %}

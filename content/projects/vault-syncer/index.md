@@ -1,10 +1,11 @@
----
-title: HashiCorp Vault Synchronizer
-organization: Elevance Health
-# featuredImg: ''
-summary: |
-  A CLI tool to dump all metadata and configurations for all data stored in HashiCorp Vault Enterprise
----
++++
+title = "HashiCorp Vault Synchronizer"
+summary = "A CLI tool to dump all metadata and configurations for all data stored in HashiCorp Vault Enterprise"
+date = "2001-09-11T00:00:00Z"
+
+[extra]
+organization = "Elevance Health"
++++
 
 Due to many limitations in HashiCorp Vault for answering audit-related questions, a tool was built to pull down a local cache of data on the filesystem that can be more searched than numerous HTTP API calls. For cases where an in-depth analysis was needed, it became much easier to answer these questions when it is a matter of running `grep -R` instead of walking each HTTP endpoint directly.
 

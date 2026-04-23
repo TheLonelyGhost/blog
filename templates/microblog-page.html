@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block breadcrumbs %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+	<ol>
+		<li><a href="{{get_url(path="./micro") }}">Stream</a></li>
+	</ol>
+</nav>
+{% endblock breadcrumbs %}
+
 {% block content %}
 <article class="box">
 	<section class="media">
@@ -15,7 +23,7 @@
 	</section>
 	<div class="content">
 		{{ page.content | safe }}
-		<p><small><a href="{{page.permalink | safe}}">{{macros::date(page_date=page.date)}}</a></small></p>
+		<p><small><a href="{{page.permalink | safe}}" aria-current="page">{{macros::date(page_date=page.date)}}</a></small></p>
 	</div>
 </article>
 {% endblock content %}

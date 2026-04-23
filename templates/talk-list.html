@@ -2,6 +2,16 @@
 
 {% block bodyclasses %}talk index{% endblock bodyclasses %}
 
+{% block breadcrumbs %}
+<!--
+<nav class="breadcrumb" aria-label="breadcrumbs">
+	<ol>
+		<li class="is-active"><a href="#" aria-current="page">Talks</a></li>
+	</ol>
+</nav>
+-->
+{% endblock breadcrumbs %}
+
 {% block content %}
 <section class="content">
 	<h1 class="title">{{ section.title | default(value="Talks") | title }}</h1>

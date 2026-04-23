@@ -3,9 +3,7 @@ title = "David Alexander"
 date = "2020-06-21T14:30:00Z"
 +++
 
-<figure class="image is-128x128 is-pulled-left mr-2 mb-2">
-	<img class="is-rounded" src="https://avatars.githubusercontent.com/u/1276113" alt="Photograph of David Alexander" />
-</figure>
+{{ figure(url="https://avatars.githubusercontent.com/u/1276113", alt="Photograph of David Alexander", class="is-128x128 is-pulled-left mr-2 mb-2") }}
 
 I am a developer with a focus on openness: open source, open information, open honesty. Being a polyglot, I choose the right tool for the job. Often this leads me toward Ruby, JavaScript, open web standards, and one of many GNU/Linux operating systems.
 
@@ -15,6 +13,6 @@ My career goal is to squash that "good enough" standard, facilitating an open fl
 
 Would you like to join me in this effort? Connect with me and let's see what impact we can have.
 
-<figure>
-	<img src="/img/remote-work-desk.svg" alt="Remote work laptop" />
-</figure>
+{% figure(url="./remote-work-desk.svg", alt="Remote work laptop") %}
+(Credit: [Lukasz Adam](https://lukaszadam.com/illustrations))
+{% end %}

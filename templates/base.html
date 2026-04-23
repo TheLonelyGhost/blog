@@ -32,6 +32,7 @@
 	<body class="{% block bodyclasses %}page{% endblock bodyclasses %} container is-max-widescreen">
 		{% include "site-header.html" ignore missing %}
 		<main class="block container is-max-desktop">
+			{% block breadcrumbs %} {% endblock breadcrumbs %}
 			{% block content %} {% endblock content %}
 		</main>
 		{% include "site-footer.html" ignore missing %}

@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
+{% block bodyclasses %}talk page{% endblock bodyclasses %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+	<ol>
+		<li><a href="{{get_url(path="./talks") }}">Talks</a></li>
+		<li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+	</ol>
+</nav>
+{% endblock breadcrumbs %}
+
 {% block content %}
 <header class="block">
 	<h1 class="title">{{ page.title }}</h1>
@@ -14,5 +25,5 @@
 {{ page.content | safe }}
 </article>
 
-{{ macros::bio() }}
+{% include "bio.html" ignore missing %}
 {% endblock content %}

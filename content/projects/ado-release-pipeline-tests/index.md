@@ -1,13 +1,15 @@
 +++
 title = "Azure Pipelines Automation"
-organization = "KAR Global"
 summary = "Testing and mutation framework for working with Azure Devops' release pipelines en masse"
 date = "2001-09-11T00:00:00Z"
+
+[extra]
+organization = "KAR Global"
 +++
 
-<!--
-{% figure(url="./woman-computer-doodle.svg", alt="Woman computer doodle", width="10em") %}&nbsp;{% end %}
--->
+{% figure(url="./woman-computer-doodle.svg", alt="Woman computer doodle", width="10em") %}
+(Credit: [Lukasz Adam](https://lukaszadam.com/illustrations))
+{% end %}
 
 Manage 10s or 100s of release pipelines uniformly using a data pipeline approach ("mutators"). Testing for uniformity of release pipelines in the areas which matter, as defined by the user in the tests, by using [PyTest].
 

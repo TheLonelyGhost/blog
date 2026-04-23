@@ -1,10 +1,15 @@
----
-title: Browser extension
-organization: '[redacted]'
-featuredImg: /work/tests-well.svg
-summary: |
-  Browser extensions for matching inventory between 2 management systems
----
++++
+title = "Browser extension"
+summary = "Browser extensions for matching inventory between 2 management systems"
+date = "2001-09-11T00:00:00Z"
+
+[extra]
+# organization = "[redacted]"
++++
+
+{% figure(url="./tests-well.svg", width="40em", height="10em") %}
+(Credit: [Lukasz Adam](https://lukaszadam.com/illustrations))
+{% end %}
 
 A browser extension commissioned to scrape data from Hardware Inventory System _A_, query Hardware Inventory System _B_ with that data, and inject the content from _B_ back into the web interface for _A_.
 

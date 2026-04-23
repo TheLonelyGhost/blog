@@ -1,16 +1,21 @@
----
-title: Reservations
-organization: Parkmobile
-featuredImg: /work/event-tickets.svg
-summary: |
-  A service for reserving paid parking spots for short-term, long-term, and event parking.
----
++++
+title = "Reservations"
+summary = "A service for reserving paid parking spots for short-term, long-term, and event parking."
+date = "2001-09-11T00:00:00Z"
+
+[extra]
+organization = "Parkmobile"
++++
+
+{% figure(url="./event-tickets.svg", width="30em", height="10em") %}
+(Credit: [Lukasz Adam](https://lukaszadam.com/illustrations))
+{% end %}
 
 A service for reserving paid parking spots for short-term, long-term, and event parking. It once housed a full application, including white-lable UI, REST API for third party integration, and payment processor. Later it downsized the responsibilities to just managing inventory (parking spot availability for given duration) and became the inventory management system for a global SOA.
 
 Prior to joining the global SOA, partners included such notable as the National Football League for Super Bowl XLIX.
 
-![Parkmobile Click-N-Park homepage](/work/CNP-parkmobile.png)
+{{ figure(url="./CNP-parkmobile.png", alt="Parkmboile Click-N-Park homepage", width="40em") }}
 
 ## Platform
 

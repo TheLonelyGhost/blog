@@ -1,10 +1,11 @@
----
-title: Continuous Integrated Security Services
-organization: Elevance Health
-# featuredImg: ''
-summary: |
-  A web service to abstract security tooling, business-specific conventions
----
++++
+title = "Continuous Integrated Security Services"
+summary = "A web service to abstract security tooling, business-specific conventions"
+date = "2001-09-11T00:00:00Z"
+
+[extra]
+organization = "Elevance Health"
++++
 
 A web service, secured via mTLS, to abstract security tools. The service implements 2 main responsibilities:
 
@@ -15,10 +16,16 @@ Pipeline integrations simplify changes in security tooling, allowing longer-term
 
 Protected actions make low-risk changes, requiring powerful credentials, accessible within safe operating parameters.
 
+{% figure(url="./continuous-integration.png", alt="Continuous Integration", width="40em", class="bg-white") %}
+(Credit: [gitlab.com](https://about.gitlab.com/solutions/continuous-integration/))
+{% end %}
+
+<!--
 <figure style="background: #EEE; border-radius: 3px; padding: 0.5em;">
 <img alt="Continuous Integration" src="/work/continuous-integration.png" />
-<caption><em>Credit: <a href="https://about.gitlab.com/solutions/continuous-integration/" rel="nofollow">gitlab.com</a></em></caption>
+<caption></caption>
 </figure>
+-->
 
 ## Platform
 

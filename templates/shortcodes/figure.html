@@ -1,6 +1,6 @@
-<figure class="image"{% if width %} style="max-width:{{width}};width:100%"{% endif %}>
-	<img alt="{{alt}}" src="{{url}}" />
-	<caption>
-		{{body | safe}}
-	</caption>
+<figure class="image{% if class %} {{class}}{% endif %}">
+	<a href="{{url}}" aria-label="magnify" title="magnify" target="blank"><img{% if alt %} alt="{{alt}}"{% endif %} src="{{url}}"{% if width or height %} style="{% if width %}max-width:{{width}};width:100%;{% endif %}{% if height %}height:{{height}};{% endif %}overflow:hidden;"{% endif %} /></a>
+	{% if body %}<figcaption>
+		{{body | markdown(inline=true) | safe }}
+	</figcaption>{% else %}<br />{% endif %}
 </figure>

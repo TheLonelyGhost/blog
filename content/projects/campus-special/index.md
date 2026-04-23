@@ -1,14 +1,19 @@
----
-title: Food Court
-organization: Campus Special
-featuredImg: /work/iced-coffee.svg
-summary: |
-  GrubHub for college campuses
----
++++
+title = "Food Court"
+summary = "GrubHub for college campuses"
+date = "2001-09-11T00:00:00Z"
+
+[extra]
+organization = "Campus Special"
++++
+
+{% figure(url="./iced-coffee.svg", width="30em", height="10em") %}
+(Credit: [Lukasz Adam](https://lukaszadam.com/illustrations))
+{% end %}
 
 A now-defunct application, playing middle-man for online food orders. In its prime, Food Court competed in the order relaying space with companies such as GrubHub, EatStreet, and Eat24, averaging over $100,000 in transactions every week.
 
-![](/work/FoodCourt-campusspecial.png)
+{{ figure(url="./foodcourt.png", width="30em") }}
 
 Campus Special's main business involved selling advertising space to businesses in collegiate areas, even expanding out to advertising for apartment complexes. Some of these advertisements were posted to the Food Court website in "Deals" and "Apartments" sections, respectively.
 
@@ -32,7 +37,7 @@ Campus Special's main business involved selling advertising space to businesses 
 - Stored and displayed complex combo specials (e.g., $10 off any appentizer when ordering entr&eacute;e after 10pm)
 - Promo code system, with configurable discount coming from Campus Special or restauranteur, max number of uses, and expiration
 
-![](/work/FoodCourt2-campusspecial.png)
+{{ figure(url="./foodcourt-alt.png", width="30em") }}
 
 ## Obstacles
 

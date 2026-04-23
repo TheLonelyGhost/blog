@@ -1,9 +1,24 @@
 figure.quote {
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
+  margin-bottom: var(--bulma-content-block-margin-bottom);;
 
   & > figcaption {
     text-align: right;
     font-size: 0.8rem;
+  }
+}
+
+figure.image {
+  margin-bottom: var(--bulma-content-block-margin-bottom);;
+
+  figcaption {
+    font-style: italic;
+  }
+  img {
+    border-radius: 0.25em;
+  }
+  &.bg-white > img {
+    background: #EEE;
   }
 }
 

@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
+{% block bodyclasses %}micro index{% endblock bodyclasses %}
+
 {% block content %}
-<h1 class="title">{{ section.title | default(value="Microblog") | title}}</h1>
+<h1 class="title">{{ section.title | default(value="Microblog") | title}} <small><a href="{{get_url(path="/micro/atom.xml")}}"><span class="icon"><i class="bx bx-rss" aria-hidden="true"></i></span></a></small></h1>
 
 {% for page in section.pages %}
 <article class="box">
