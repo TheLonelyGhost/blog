@@ -4,7 +4,7 @@ date: '2023-02-01'
 # location: HashiTalks 2023
 ---
 
-> youtube id="FdCJVvYr5BI" title="IRSA Evolved: Transparent AWS Access by Any Kubernetes Workload"
+{{ youtube_embed(video_id="FdCJVvYr5BI", title="IRSA Evolved: Transparent AWS Access by Any Kubernetes Workload") }}
 
 ([slides](https://github.com/TheLonelyGhost/presentations))
 

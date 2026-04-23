@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="block">
+	<h1 class="title">{{ page.title }}</h1>
+	<p class="subtitle"></p>
+	<p class="level">
+		<span class="level-left">
+			<span class="level-item icon-text"><span class="icon"><i class="bx bx-calendar-alt"></i></span> <span>Posted {{ macros::date(page_date=page.date, fmt="%-d %b %Y", classes="relative") }}</span></span>
+		</span>
+	</p>
+</header>
+<article class="content is-clearfix">
+{{ page.content | safe }}
+</article>
+
+{{ macros::bio() }}
+{% endblock content %}
