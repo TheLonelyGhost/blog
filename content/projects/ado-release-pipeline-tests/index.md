@@ -1,19 +1,21 @@
----
-title: Azure Pipelines Automation
-organization: KAR Global
-featuredImg: /work/woman-computer-doodle.svg
-summary: |
-  Testing and mutation framework for working with Azure DevOps' release pipelines en masse
----
++++
+title = "Azure Pipelines Automation"
+organization = "KAR Global"
+summary = "Testing and mutation framework for working with Azure Devops' release pipelines en masse"
+date = "2001-09-11T00:00:00Z"
++++
+
+<!--
+{% figure(url="./woman-computer-doodle.svg", alt="Woman computer doodle", width="10em") %}&nbsp;{% end %}
+-->
 
 Manage 10s or 100s of release pipelines uniformly using a data pipeline approach ("mutators"). Testing for uniformity of release pipelines in the areas which matter, as defined by the user in the tests, by using [PyTest].
 
 Used during a migration of 93 discrete applications and libraries from Jenkins + (on-prem) VM deployment approach to use Azure Pipelines + (on-prem) Kubernetes. This ensured uniformity among all 93 applications while still allowing for unique patterns among a subset of applications.
 
-<figure>
-<img alt="Azure Pipelines" src="/work/azure-pipelines.png" />
-<caption><em>Credit: <a href="https://devblogs.microsoft.com/devops/automating-releases-in-github-through-azure-pipelines/" rel="nofollow">devblogs.microsoft.com</a></em></caption>
-</figure>
+{% figure(url="./azure-pipelines.png", alt="Azure Pipelines", width="40em") %}
+<em>(Credit: <a href="https://devblogs.microsoft.com/devops/automating-releases-in-github-through-azure-pipelines/" rel="nofollow">devblogs.microsoft.com</a>)</em>
+{% end %}
 
 [PyTest]: https://docs.pytest.org/en/latest/
 
