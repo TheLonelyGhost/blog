@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block bodyclasses %}project index{% endblock bodyclasses %}
+
+{% block content %}
+<section class="content">
+	<h1 class="title">{{ section.title | default(value="Projects") | title }}</h1>
+
+	<ul>
+		{% for page in section.pages %}
+		<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+		{% endfor %}
+	</ul>
+</section>
+{% endblock content %}

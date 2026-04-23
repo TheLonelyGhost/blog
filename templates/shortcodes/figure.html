@@ -1,0 +1,6 @@
+<figure class="image"{% if width %} style="max-width:{{width}};width:100%"{% endif %}>
+	<img alt="{{alt}}" src="{{url}}" />
+	<caption>
+		{{body | safe}}
+	</caption>
+</figure>

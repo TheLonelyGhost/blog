@@ -1,8 +1,8 @@
 +++
 title = "Stream"
 sort_by = "date"
-template = "microblog.html"
-page_template = "microblog-post.html"
+template = "microblog-list.html"
+page_template = "microblog-page.html"
 +++
 
 <aside style="margin-bottom:1em">

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block bodyclasses %}post index{% endblock bodyclasses %}
+{% block bodyclasses %}talk index{% endblock bodyclasses %}
 
 {% block content %}
 <section class="content">
-	<h1 class="title">{{ section.title | default(value="Blog") | title }}</h1>
+	<h1 class="title">{{ section.title | default(value="Talks") | title }}</h1>
 
 	<ul>
 		{% for page in section.pages %}
