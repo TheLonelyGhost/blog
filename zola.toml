@@ -1,0 +1,67 @@
+# The URL the site will be built for
+base_url = "https://www.thelonelyghost.com"
+
+title = "Implements Programmer"
+author = "David Alexander"
+description = ""
+default_language = "en"
+
+compile_sass = true
+minify_html = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+feed_filenames = ["atom.xml", "rss.xml"]
+hard_link_static = true
+generate_sitemap = true
+generate_robots_txt = true
+
+taxonomies = [
+  { name = "tags" },
+]
+
+[markdown]
+render_emoji = true
+
+external_links_class = "external-link"
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+
+definition_list = true
+bottom_footnotes = true
+
+# When set to "true", support for GitHub-style alerts, a.k.a. callouts or admonitions, is enabled in the Markdown parser.
+# For example, this Markdown syntax:
+#
+#     > [!NOTE]
+#     > alert note
+#
+# will result in the following generated HTML:
+#
+#     <blockquote class="markdown-alert-note">
+#     <p>alert note</p>
+#     </blockquote>
+#
+# where the CSS class name suffix may be `note`, `tip`, `important`, `warning`, or `caution`, depending on the alert type.
+# Visual appearance depends on theme-level support; refer to your theme's documentation for more information.
+github_alerts = true
+
+lazy_async_image = true
+
+insert_anchor_links = "right"
+
+[markdown.highlighting]
+error_on_missing_language = true
+
+theme = "dracula"
+
+[link_checker]
+internal_level = "error"
+external_level = "warn"
+
+[search]
+index_format = "elasticlunr_javascript"
+
+[extra]
+# Intentionally left blank

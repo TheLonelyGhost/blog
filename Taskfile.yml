@@ -1,0 +1,33 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  BOXICONS_VERSION: 3.0.8
+
+tasks:
+  serve:
+    aliases:
+      - default
+    cmds:
+      - cmd: zola serve --open
+    silent: true
+
+  vendor:
+    cmds:
+      - task: vendor:boxicons
+
+  vendor:boxicons:
+    cmds:
+      - cmd: |
+          mkdir -p static/vendor/boxicons-{{.BOXICONS_VERSION}}/basic static/vendor/boxicons-{{.BOXICONS_VERSION}}/filled static/vendor/boxicons-{{.BOXICONS_VERSION}}/brands
+      - cmd: |
+          for i in min.css ttf woff woff2; do
+            curl -o "static/vendor/boxicons-{{.BOXICONS_VERSION}}/basic/boxicons.$i" "https://cdn.boxicons.com/{{.BOXICONS_VERSION}}/fonts/basic/boxicons.$i"
+            curl -o "static/vendor/boxicons-{{.BOXICONS_VERSION}}/filled/boxicons-filled.$i" "https://cdn.boxicons.com/{{.BOXICONS_VERSION}}/fonts/filled/boxicons-filled.$i"
+            curl -o "static/vendor/boxicons-{{.BOXICONS_VERSION}}/brands/boxicons-brands.$i" "https://cdn.boxicons.com/{{.BOXICONS_VERSION}}/fonts/brands/boxicons-brands.$i"
+          done
+
+          curl -o "static/vendor/boxicons-{{.BOXICONS_VERSION}}/animations.min.css" "https://cdn.boxicons.com/animations.min.css"
+    status:
+      - test -e static/vendor/boxicons-{{.BOXICONS_VERSION}}
