@@ -9,6 +9,8 @@ Since starting this blog, I've encountered any number of topics where I've liter
 
 When I'm at my computer, I want to code. When I'm away from my computer, I'm typically on my phone scrolling through twitter or reddit, wishing I would blog more like the posts I end up reading.
 
+<!-- toc -->
+
 ## Netlify
 
 I typically use Netlify for deploying any static sites these days, if only because I can easily hook it up to github and auto-deploy using more than just Jekyll, even going so far as to have a custom domain with LetsEncrypt TLS certs. [And I have done that before](https://www.grafeas.org/). It only makes sense that I would investigate what else they have to offer.

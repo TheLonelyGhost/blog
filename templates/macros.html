@@ -1,6 +1,33 @@
-{% macro bio() %}
-{% endmacro bio %}
-
 {%- macro date(page_date, fmt="%l:%M %p - %a, %-d %b %Y", classes="") -%}
 <time {% if classes %}class="{{ classes }}" {% endif %}datetime="{{ page_date | date(format="%+", timezone="UTC") }}">{{ page_date | date(format=fmt, locale="en_US") }}</time>
 {%- endmacro date -%}
+
+{%- macro toc(toc, depth, heading="h2") %}
+{%- if heading %}
+<section class="box toc">
+<{{heading}} class="toc-title">Contents</{{heading}}>
+{%- endif %}
+{% if toc %}
+<ol>
+{%- for heading in toc %}
+	<li>
+		<a href="{{ heading.permalink | safe }}">{{ heading.title }}</a>
+		{% if heading.children and depth > 1 -%}
+			{{ self::toc(toc=heading.children, depth=depth - 1, heading="") }}
+		{%- endif %}
+	</li>
+{%- endfor %}
+</ol>
+{% endif %}
+{% if heading %}
+</section>
+{% endif %}
+{%- endmacro %}
+
+{%- macro format_content(resource) %}
+	{%- set content = resource.content %}
+	{%- if content is containing("<!-- toc -->") %}
+		{%- set content = content | replace(from="<!-- toc -->", to=self::toc(toc=resource.toc, depth=(resource.extra.toc_depth | default(value=2)))) %}
+	{%- endif -%}
+	{{ content | safe }}
+{%- endmacro %}

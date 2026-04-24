@@ -24,7 +24,7 @@
 	</p>
 </header>
 <article class="content is-clearfix">
-{{ page.content | safe }}
+	{{ macros::format_content(resource=page) | safe }}
 </article>
 
 {% include "bio.html" ignore missing %}

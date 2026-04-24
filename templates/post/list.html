@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block bodyclasses %}talk index{% endblock bodyclasses %}
+{% block bodyclasses %}post index{% endblock bodyclasses %}
 
 {% block breadcrumbs %}
 <!--
 <nav class="breadcrumb" aria-label="breadcrumbs">
 	<ol>
-		<li class="is-active"><a href="#" aria-current="page">Talks</a></li>
+		<li class="is-active"><a href="#" aria-current="page">Posts</a></li>
 	</ol>
 </nav>
 -->
@@ -14,7 +14,8 @@
 
 {% block content %}
 <section class="content">
-	<h1 class="title">{{ section.title | default(value="Talks") | title }}</h1>
+	<h1 class="title">{{ section.title | default(value="Blog") | title }} <small><a href="{{get_url(path="/posts/atom.xml")}}"><span class="icon"><i class="bx bx-rss" aria-hidden="true"></i></span></a></small></h1>
+	{% if body %}{{body | markdown() | safe}}{% endif %}
 
 	<ul>
 		{% for page in section.pages %}
@@ -22,6 +23,6 @@
 		{% endfor %}
 	</ul>
 
-	{{ macros::bio() }}
+	{% include "bio.html" ignore missing %}
 </section>
 {% endblock content %}

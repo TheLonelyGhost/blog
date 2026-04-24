@@ -7,6 +7,8 @@ Blogging is supposed to be super easy, low effort, and high reward. compare the 
 
 For this reason, among many others, blogging is a form of self-promotion, of self-discovery, and of public navel-gazing (you didn't think it's all sunshine and roses, did you?) where thoughts and ideas can be freely shared or ignored. The web is the public forum.
 
+<!-- toc -->
+
 # The classic advice
 
 ## Start writing

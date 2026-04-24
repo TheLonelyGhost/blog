@@ -22,6 +22,25 @@ figure.image {
   }
 }
 
+section.toc {
+  background-color: var(--bulma-content-blockquote-background-color);
+  display: inline-block;
+  // padding: 0.75em 0.5em;
+  padding: var(--bulma-content-blockquote-padding);
+
+  .toc-title {
+    font-size: var(--bulma-title-sub-size);
+  }
+  ol, ul {
+    margin-top: 0 !important;
+  }
+}
+
+aside.box.bio {
+  background-color: var(--bulma-content-blockquote-background-color);
+  padding: var(--bulma-content-blockquote-padding);
+}
+
 h1, h2, h3, h4, h5, h6 {
   & > a.zola-anchor {
     display: none;

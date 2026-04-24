@@ -1,13 +1,8 @@
 +++
 title = "Stream"
 sort_by = "date"
-template = "microblog-list.html"
-page_template = "microblog-page.html"
+template = "micro/list.html"
+page_template = "micro/single.html"
+in_search_index = false
+generate_feeds = true
 +++
-
-<aside style="margin-bottom:1em">
-  <section class="bio" style="display:flex">
-    <img src="/icon.svg" style="max-width:8em;max-height:8em;margin-right:1em" alt="Happy ghost" />
-    <p style="flex-grow: 1">A public notebook, written by <strong>David Alexander</strong>, who lives and works in the greater Indianapolis area building useful things.</p>
-  </section>
-</aside>

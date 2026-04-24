@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref != 'refs/heads/main'
     # needs: test
-    #
     env:
       TZ: America/New_York
     concurrency:
@@ -21,13 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: recursive  # Fetch Hugo themes (true or recursive)
+          # submodules: recursive  # Fetch Hugo themes (true or recursive)
           fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.19.1
+          tool: zola@0.22.1
 
       # - uses: actions/cache@v4
       #   with:
@@ -58,13 +57,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: recursive  # Fetch Hugo themes (true or recursive)
+          # submodules: recursive  # Fetch Hugo themes (true or recursive)
           fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.19.1
+          tool: zola@0.22.1
 
       # - uses: actions/cache@v4
       #   with:

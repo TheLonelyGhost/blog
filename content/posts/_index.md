@@ -1,7 +1,8 @@
 +++
 title = "Posts"
 sort_by = "date"
-template = "blog-list.html"
-page_template = "blog-page.html"
+template = "post/list.html"
+page_template = "post/single.html"
+in_search_index = false
 generate_feeds = true
 +++
