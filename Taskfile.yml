@@ -10,7 +10,7 @@ tasks:
     aliases:
       - default
     cmds:
-      - cmd: zola serve --open
+      - cmd: zola serve --drafts --open
     silent: true
 
   vendor:
