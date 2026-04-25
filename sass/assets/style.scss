@@ -22,6 +22,24 @@ body.post.page {
   }
 }
 
+body.home {
+  main {
+    text-align: center;
+  }
+
+  figure.image.profile {
+    margin-bottom: 1em;
+    width: 128px;
+    height: 128px;
+  }
+  h1.title {
+    margin-top: 0;
+  }
+  nav.linktree {
+    justify-content: space-evenly;
+  }
+}
+
 // Content: Blockquote with citation
 figure.quote {
   margin-bottom: var(--bulma-content-block-margin-bottom);
