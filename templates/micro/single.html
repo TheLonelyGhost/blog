@@ -4,6 +4,7 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
 	<ol>
 		<li><a href="{{get_url(path="./micro") }}">Stream</a></li>
+		<li class="is-active"><a href="{{ page.permalink }}" aria-current="page">{{ macros::date(page_date=page.date) }}</a></li>
 	</ol>
 </nav>
 {% endblock breadcrumbs %}
