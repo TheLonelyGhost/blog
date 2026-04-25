@@ -22,7 +22,5 @@
 		<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a> <small>({{ macros::date(page_date=page.date, classes="relative") }})</small></li>
 		{% endfor %}
 	</ul>
-
-	{% include "bio.html" ignore missing %}
 </section>
 {% endblock content %}

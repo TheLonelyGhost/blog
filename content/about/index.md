@@ -3,7 +3,7 @@ title = "David Alexander"
 date = "2020-06-21T14:30:00Z"
 +++
 
-{{ figure(url="https://avatars.githubusercontent.com/u/1276113", alt="Photograph of David Alexander", class="is-128x128 is-pulled-left mr-2 mb-2") }}
+{{ figure(url="/avatar.jpg", alt="Photograph of David Alexander", class="is-128x128 is-pulled-left mr-2 mb-2") }}
 
 I am a developer with a focus on openness: open source, open information, open honesty. Being a polyglot, I choose the right tool for the job. Often this leads me toward Ruby, JavaScript, open web standards, and one of many GNU/Linux operating systems.
 

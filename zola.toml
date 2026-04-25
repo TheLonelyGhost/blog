@@ -64,5 +64,4 @@ external_level = "warn"
 index_format = "elasticlunr_javascript"
 
 [extra]
-# Intentionally left blank
-avatar = "https://avatars.githubusercontent.com/u/1276113"
+avatar = "/avatar.jpg" # "https://avatars.githubusercontent.com/u/1276113"
