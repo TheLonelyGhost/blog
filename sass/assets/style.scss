@@ -1,6 +1,30 @@
+body.micro.index {
+  // Alignment: Social media feed with separators between each item
+  article {
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+    border-top-width: thin;
+    border-top-style: inset;
+  }
+  article:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+body.post.page {
+  // Alignment: Vertically center icons to text, with spacers between each metadata entry
+  header > .meta {
+    .icon-text {
+      margin-right: 1em;
+    }
+  }
+}
+
+// Content: Blockquote with citation
 figure.quote {
-  // padding-bottom: 1rem;
-  margin-bottom: var(--bulma-content-block-margin-bottom);;
+  margin-bottom: var(--bulma-content-block-margin-bottom);
 
   & > figcaption {
     text-align: right;
@@ -8,6 +32,60 @@ figure.quote {
   }
 }
 
+// Content: Biography snippet
+aside.content.bio {
+  background-color: var(--bulma-content-blockquote-background-color);
+  padding: var(--bulma-content-blockquote-padding);
+
+  // Alignment: Flexible to viewport
+  // Photo to the left on bigger screens with reflowing text
+  // Photo above text on smaller screens.
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  gap: 1em;
+  flex-wrap: wrap;
+  figure {
+    width: 128px;
+    flex-basis: auto;
+    margin-bottom: 0;
+  }
+  div.content {
+    // 200px is a rough approximation that doesn't overflow the
+    // box, even at the smallest viewport.
+    min-width: 200px;
+    max-width: 100%;
+    flex: 1 5;
+  }
+}
+
+// Content: Automatic hyperlinks for headings
+h1, h2, h3, h4, h5, h6 {
+  & > a.zola-anchor {
+    display: none;
+    padding-left: 0.25em;
+    opacity: 0.5;
+  }
+  &:hover > a.zola-anchor, &:focus > a.zola-anchor {
+    display: inline-block;
+  }
+}
+
+// Content: Table of contents snippet
+section.toc {
+  background-color: var(--bulma-content-blockquote-background-color);
+  display: inline-block;
+  padding: var(--bulma-content-blockquote-padding);
+
+  .toc-title {
+    font-size: var(--bulma-title-sub-size);
+  }
+  ol, ul {
+    margin-top: 0 !important;
+  }
+}
+
+// Content: Sane image embed snippet
 figure.image {
   margin-bottom: var(--bulma-content-block-margin-bottom);;
 
@@ -22,36 +100,7 @@ figure.image {
   }
 }
 
-section.toc {
-  background-color: var(--bulma-content-blockquote-background-color);
-  display: inline-block;
-  // padding: 0.75em 0.5em;
-  padding: var(--bulma-content-blockquote-padding);
-
-  .toc-title {
-    font-size: var(--bulma-title-sub-size);
-  }
-  ol, ul {
-    margin-top: 0 !important;
-  }
-}
-
-aside.box.bio {
-  background-color: var(--bulma-content-blockquote-background-color);
-  padding: var(--bulma-content-blockquote-padding);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  & > a.zola-anchor {
-    display: none;
-    padding-left: 0.25em;
-    opacity: 0.5;
-  }
-  &:hover > a.zola-anchor, &:focus > a.zola-anchor {
-    display: inline-block;
-  }
-}
-
+// Content: Video embed snippet
 section.youtube-embed {
   position: relative;
   padding-bottom: 56.25%;

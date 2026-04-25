@@ -14,14 +14,14 @@
 {% block content %}
 <header class="block">
 	<h1 class="title">{{ page.title }}</h1>
-	<p class="subtitle"></p>
-	<p class="level">
-		<span class="level-left">
-			<span class="level-item icon-text"><span class="icon"><i class="bx bx-calendar-alt"></i></span> <span>Posted {{ macros::date(page_date=page.date, fmt="%-d %b %Y", classes="relative") }}</span></span>
-			<span class="level-item icon-text"><span class="icon"><i class="bx bx-book"></i></span> <span>{{ page.word_count }} words</span></span>
-			<span class="level-item icon-text"><span class="icon"><i class="bx bx-timer"></i></span> <span>{{ page.reading_time }} minute read</span></span>
-		</span>
-	</p>
+	{%- if page.extra.subtitle -%}
+	<p class="subtitle">{{ page.extra.subtitle }}</p>
+	{%- endif -%}
+	<ul class="meta">
+		<li class="icon-text"><span class="icon"><i class="bx bx-calendar-alt"></i></span> <span>Posted {{ macros::date(page_date=page.date, fmt="%-d %b %Y", classes="relative") }}</span></li>
+		<li class="icon-text"><span class="icon"><i class="bx bx-book"></i></span> <span>{{ page.word_count }} words</span></li>
+		<li class="icon-text"><span class="icon"><i class="bx bx-timer"></i></span> <span>{{ page.reading_time }} minute read</span></li>
+	</ul>
 </header>
 <article class="content is-clearfix">
 	{{ macros::format_content(resource=page) | safe }}
