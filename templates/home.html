@@ -1,7 +1,39 @@
 {% extends "base.html" %}
 
+{% block bodyclasses %}home{% endblock bodyclasses %}
+
 {% block content %}
-<h1 class="title">
-	This is my blog made with Zola.
-</h1>
+<section class="section has-text-centered is-medium">
+	<figure class="image mx-auto mb-5 is-128x128">
+		<img alt="Photograph of David Alexander" src="{{config.extra.avatar}}" />
+	</figure>
+	<h1 class="title">David Alexander</h1>
+	<p class="subtitle">Security nerd, builder of things, and indie web enthusiast</p>
+	<nav class="buttons level is-mobile">
+		<a class="level-item button is-primary is-large" rel="me" title="GitHub" href="https://github.com/TheLonelyGhost">
+			<span class="icon"><i class="bxl bx-github" aria-hidden="true"></i></span>
+		</a>
+		<a class="level-item button is-primary is-large" rel="me" title="GitLab" href="https://gitlab.com/TheLonelyGhost">
+			<span class="icon"><i class="bxl bx-gitlab" aria-hidden="true"></i></span>
+		</a>
+		<a class="level-item button is-primary is-large" rel="me" title="Codeberg" href="https://codeberg.org/thelonelyghost">
+			<span class="icon"><i class="bx bx-git-repo-forked" aria-hidden="true"></i></span>
+		</a>
+		<a class="level-item button is-primary is-large" rel="me" title="Sourcehut" href="https://sr.ht/~thelonelyghost">
+			<span class="icon"><i class="bx bx-circle" aria-hidden="true"></i></span>
+		</a>
+		<a class="level-item button is-primary is-large" rel="me" title="LinkedIn" href="https://www.linkedin.com/in/thelonelyghost">
+			<span class="icon"><i class="bxl bx-linkedin" aria-hidden="true"></i></span>
+		</a>
+		<a class="level-item button is-primary is-large" rel="me" title="Mastodon" href="https://hachyderm.io/@thelonelyghost">
+			<span class="icon"><i class="bxl bx-mastodon" aria-hidden="true"></i></span>
+		</a>
+		<a class="level-item button is-primary is-large" rel="me" title="Twitch" href="https://www.twitch.tv/onus_on_you">
+			<span class="icon"><i class="bxl bx-twitch" aria-hidden="true"></i></span>
+		</a>
+		<a class="level-item button is-primary is-large" title="Feed" href="/posts/atom.xml">
+			<span class="icon"><i class="bx bx-rss" aria-hidden="true"></i></span>
+		</a>
+	</nav>
+</section>
 {% endblock content %}
