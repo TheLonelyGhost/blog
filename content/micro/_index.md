@@ -1,5 +1,5 @@
 +++
-title = "Stream"
+title = "Micro"
 sort_by = "date"
 template = "micro/list.html"
 page_template = "micro/single.html"
